@@ -55,9 +55,9 @@ class NodosController extends Controller
      * @param  \App\Models\Nodos  $nodos
      * @return \Illuminate\Http\Response
      */
-    public function edit(Nodos $nodos)
+    public function edit(Nodos $nodo)
     {
-        //
+        return view('views/nodos/edit', compact('nodo'));
     }
 
     /**
@@ -67,9 +67,21 @@ class NodosController extends Controller
      * @param  \App\Models\Nodos  $nodos
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Nodos $nodos)
+    public function update(Request $request, Nodos $nodo)
     {
-        //
+        $this->validate($request, [
+            'id_nodo' => 'required',
+            'id_partida' => 'required',
+            'descripcion_nodo' => 'required',
+        ]);
+
+        $nodo->id_nodo = $request->id_nodo;
+        $nodo->id_partida = $request->id_partida;
+        $nodo->descripcion_nodo = $request->descripcion_nodo;
+
+        $nodo->save();
+
+        return redirect()->route('nodos.index');
     }
 
     /**

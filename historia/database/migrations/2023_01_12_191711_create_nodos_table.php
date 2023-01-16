@@ -17,6 +17,7 @@ return new class extends Migration
 
             $table->integer('id_nodo');
             $table->integer('id_partida');
+            $table->string('descripcion_nodo', 255);
         });
     }
 
