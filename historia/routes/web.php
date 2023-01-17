@@ -1,6 +1,14 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\FinalesAlcanzadosController;
+use App\Http\Controllers\FinalesController;
+use App\Http\Controllers\JugadoresController;
+use App\Http\Controllers\LinksController;
+use App\Http\Controllers\NodosController;
+use App\Http\Controllers\PartidasController;
+
+
 
 Route::resource('Finales_alcanzados', FinalesAlcanzadosController::class);
 Route::resource('Finales', FinalesController::class);
