@@ -24,7 +24,7 @@ class NodosController extends Controller
      */
     public function create()
     {
-        //
+        return view('paginas/nodos/create');
     }
 
     /**
@@ -35,7 +35,18 @@ class NodosController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $this->validate($request, [
+            'ID_NODO' => 'required',
+            'ID_CAMINO' => 'required',
+            'ID_PARTIDA' => 'required',
+        ]);
+
+        $nodo = new Nodo();
+        $nodo->ID_NODO = $request->ID_NODO;
+        $nodo->ID_CAMINO = $request->ID_CAMINO;
+        $nodo->ID_PARTIDA = $request->ID_PARTIDA;
+
+        return redirect()->route('nodos.index');
     }
 
     /**
