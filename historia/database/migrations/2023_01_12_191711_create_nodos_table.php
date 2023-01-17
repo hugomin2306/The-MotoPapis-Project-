@@ -15,9 +15,10 @@ return new class extends Migration
     {
         Schema::create('nodos', function (Blueprint $table) {
 
-            $table->integer('id_nodo');
+            $table->id();
             $table->integer('id_partida');
             $table->string('descripcion_nodo', 255);
+            $table->timestamps();
         });
     }
 

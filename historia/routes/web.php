@@ -14,7 +14,7 @@ Route::resource('Finales_alcanzados', FinalesAlcanzadosController::class);
 Route::resource('Finales', FinalesController::class);
 Route::resource('Jugadores', JugadoresController::class);
 Route::resource('Links', LinksController::class);
-Route::resource('Nodos', NodosController::class);
+Route::resource('nodo', NodosController::class);
 Route::resource('Partidas', PartidasController::class);
 
 /*

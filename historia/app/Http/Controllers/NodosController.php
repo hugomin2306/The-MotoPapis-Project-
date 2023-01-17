@@ -14,7 +14,8 @@ class NodosController extends Controller
      */
     public function index()
     {
-        //
+        $nodo = Nodos::orderBy('id')->get();
+        return view('paginas/Nodos/index', compact('nodo'));
     }
 
     /**
@@ -36,17 +37,18 @@ class NodosController extends Controller
     public function store(Request $request)
     {
         $this->validate($request, [
-            'id_nodo' => 'required',
+            'id' => 'required',
             'id_partida' => 'required',
             'descripcion_nodo' => 'required',
         ]);
 
-        $nodo = new Nodo();
-        $nodo->id_nodo = $request->id_nodo;
+        $nodo = new Nodos();
+        $nodo->id = $request->id;
         $nodo->id_partida = $request->id_partida;
         $nodo->descripcion_nodo = $request->descripcion_nodo;
+//        $nodo->save();
 
-        return redirect()->route('Nodos.index');
+        return redirect()->route('nodo.index');
     }
 
     /**
@@ -55,9 +57,9 @@ class NodosController extends Controller
      * @param  \App\Models\Nodos  $nodos
      * @return \Illuminate\Http\Response
      */
-    public function show(Nodos $nodos)
+    public function show(Nodos $nodo)
     {
-        //
+        return view('paginas/Nodos/show', compact('nodo'));
     }
 
     /**
@@ -81,18 +83,18 @@ class NodosController extends Controller
     public function update(Request $request, Nodos $nodo)
     {
         $this->validate($request, [
-            'id_nodo' => 'required',
+            'id' => 'required',
             'id_partida' => 'required',
             'descripcion_nodo' => 'required',
         ]);
 
-        $nodo->id_nodo = $request->id_nodo;
+        $nodo->id = $request->id_nodo;
         $nodo->id_partida = $request->id_partida;
         $nodo->descripcion_nodo = $request->descripcion_nodo;
 
         $nodo->save();
 
-        return redirect()->route('Nodos.index');
+        return redirect()->route('nodo.index');
     }
 
     /**
@@ -101,9 +103,9 @@ class NodosController extends Controller
      * @param  \App\Models\Nodos  $nodos
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Nodos $nodos)
+    public function destroy(Nodos $nodo)
     {
-        $nodos->delete();
-        return redirect()->route('Nodos.index');
+        $nodo->delete();
+        return redirect()->route('nodo.index');
     }
 }
