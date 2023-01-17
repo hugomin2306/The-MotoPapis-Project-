@@ -1,7 +1,7 @@
 <x-zz.base>
     <x-slot:titulo>Editar nodo</x-slot:titulo>
 
-    <form action='{{ route('nodos.update', $nodo) }}' method='post'>
+    <form action='{{ route('Nodos.update', $nodo) }}' method='post'>
         @method('put')
 
         <label for='id_nodo'>ID Nodo</label>

@@ -5,15 +5,15 @@
     <title>{{ $tituloHead ?? 'Historia Interactiva' }}</title>
 </head>
 <body>
-    <x-zz.menu />
 
-    <h1>{{ $tituloVisible }}</h1>
+
+    <h1>{{ $titulo }}</h1>
 
     <hr />
 
     {{ $slot }}
 
-    <x-zz.pie />
+
 </body>
 </html>
 

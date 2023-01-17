@@ -24,7 +24,7 @@ class NodosController extends Controller
      */
     public function create()
     {
-        return view('views/nodos/create');
+        return view('paginas/Nodos/create');
     }
 
     /**
@@ -68,7 +68,7 @@ class NodosController extends Controller
      */
     public function edit(Nodos $nodo)
     {
-        return view('views/nodos/edit', compact('nodo'));
+        return view('paginas/Nodos/edit', compact('nodo'));
     }
 
     /**
