@@ -3,20 +3,17 @@
 
     <form action='{{ route('nodo.update', $nodo) }}' method='post'>
         @method('put')
-
-        <label for='id'>ID Nodo</label>
-        <input id='id' name='id' type='text' value='{{ $nodo->id }}'>
-        <br />
+        @csrf
 
         <label for='id_partida'>ID Partida</label>
         <input id='id_partida' name='id_partida' type='text' value='{{ $nodo->id_partida }}'>
         <br />
 
-        <label for='descripcion'>Descripcion</label>
-        <input id='descripcion' name='descripcion' type='text' value='{{ $nodo->descripcion_nodo }}'>
+        <label for='descripcion_nodo'>Descripcion</label>
+        <input id='descripcion_nodo' name='descripcion_nodo' type='text' value='{{ $nodo->descripcion_nodo }}'>
         <br />
         <br />
-        <button type='submit'>Actualizar</button>
+        <input class='button' type='submit' name='crear' value='Editar Nodo'>
         <br />
         <br />
     </form>

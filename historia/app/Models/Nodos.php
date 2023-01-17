@@ -8,4 +8,5 @@ use Illuminate\Database\Eloquent\Model;
 class Nodos extends Model
 {
     use HasFactory;
+
 }

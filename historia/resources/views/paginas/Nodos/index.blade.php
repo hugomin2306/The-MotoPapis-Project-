@@ -38,6 +38,6 @@
 
     <button><a href='{{ route('nodo.create') }}'>Crear</a></button><br><br>
 
-    <a href='{{ route('nodo.index') }}'>Listado de Personas</a>
+    <a href='{{ route('nodo.index') }}'>Listado de Nodos</a>
 
 </x-zz.base>

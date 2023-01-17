@@ -5,9 +5,7 @@
 
     <form action='{{ route('nodo.store') }}' method='post'>
         @method('post')
-
-        <br><label for='id'>ID Nodo</label>
-        <input type='number' id='id' name='id' />
+        @csrf
 
         <br><label for='id_partida'>ID Partida</label>
         <input type='number' id='id_partida' name='id_partida' />

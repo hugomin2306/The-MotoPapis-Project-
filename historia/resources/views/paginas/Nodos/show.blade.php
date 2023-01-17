@@ -7,11 +7,21 @@
     <p>ID_Partida: {{$nodo->id_partida}}</p>
     <p>Descripcion: {{$nodo->descripcion_nodo}}</p>
 
+    <br/>
 
-    <a href='{{ route('nodo.edit', $nodo) }}'>Editarla</a>
+    <a href='{{ route('nodo.edit', $nodo) }}'>Editar</a>
 
     <br/><br/>
 
-    <a href='{{ route('nodo.index') }}'>Volver al listado</a>
+    <form id='{{ $nodo->id }}' action='{{ route('nodo.destroy', $nodo) }}'
+          method='post'>
+        @method('delete')
+
+        <input class='button' type='submit' name='crear' value='Eliminar nodo' />
+    </form>
+
+    <br>
+
+        <a href='{{ route('nodo.index') }}'>Volver al listado</a>
 
 </x-zz.base>
