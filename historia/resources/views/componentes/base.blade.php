@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>{{ $tituloHead ?? 'Laragenda' }}</title>
+    <title>{{ $tituloHead ?? 'Historia Interactiva' }}</title>
 </head>
 <body>
     <x-zz.menu />
