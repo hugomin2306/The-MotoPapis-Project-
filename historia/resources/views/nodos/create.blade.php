@@ -1,6 +1,7 @@
-<?php
-?>
-    <h1>Crear Nodo</h1>
+
+<x-zz.base>
+
+    <x-slot:titulo>Crear nodo</x-slot:titulo>
 
     <form action='{{ route('nodos.store') }}' method='post'>
         @method('post');
@@ -16,3 +17,5 @@
     </form>
 
 <a href=''{{ route('nodos.index') }}'> Ir al listado</a>
+
+</x-zz.base>
