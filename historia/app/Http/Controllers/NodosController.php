@@ -36,17 +36,17 @@ class NodosController extends Controller
     public function store(Request $request)
     {
         $this->validate($request, [
-            'ID_NODO' => 'required',
-            'ID_CAMINO' => 'required',
-            'ID_PARTIDA' => 'required',
+            'id_nodo' => 'required',
+            'id_partida' => 'required',
+            'descripcion_nodo' => 'required',
         ]);
 
         $nodo = new Nodo();
-        $nodo->ID_NODO = $request->ID_NODO;
-        $nodo->ID_CAMINO = $request->ID_CAMINO;
-        $nodo->ID_PARTIDA = $request->ID_PARTIDA;
+        $nodo->id_nodo = $request->id_nodo;
+        $nodo->id_partida = $request->id_partida;
+        $nodo->descripcion_nodo = $request->descripcion_nodo;
 
-        return redirect()->route('nodos.index');
+        return redirect()->route('Nodos.index');
     }
 
     /**
@@ -92,7 +92,7 @@ class NodosController extends Controller
 
         $nodo->save();
 
-        return redirect()->route('nodos.index');
+        return redirect()->route('Nodos.index');
     }
 
     /**
@@ -104,6 +104,6 @@ class NodosController extends Controller
     public function destroy(Nodos $nodos)
     {
         $nodos->delete();
-        return redirect()->route('nodos.index');
+        return redirect()->route('Nodos.index');
     }
 }
