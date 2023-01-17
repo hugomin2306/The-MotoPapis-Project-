@@ -24,7 +24,7 @@ class NodosController extends Controller
      */
     public function create()
     {
-        return view('paginas/nodos/create');
+        return view('views/nodos/create');
     }
 
     /**
