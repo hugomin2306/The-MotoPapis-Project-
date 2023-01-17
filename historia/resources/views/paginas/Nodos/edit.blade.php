@@ -15,8 +15,10 @@
         <label for='descripcion'>Descripcion</label>
         <input id='descripcion' name='descripcion' type='text' value='{{ $nodo->descripcion_nodo }}'>
         <br />
-
+        <br />
         <button type='submit'>Actualizar</button>
+        <br />
+        <br />
     </form>
 
       <a href='{{ route('nodo.index') }}'>Listado de Nodos</a>

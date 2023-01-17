@@ -16,10 +16,12 @@
         <input type='text' id='descripcion_nodo' name='descripcion_nodo' />
 
         <br>
+        <br>
         <input class='button' type='submit' name='crear' value='Crear nodo' />
 
     </form>
 
+    <br>
 <a href='{{ route('nodo.index') }}'> Ir al listado</a>
 
 </x-zz.base>
