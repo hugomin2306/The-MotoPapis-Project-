@@ -17,11 +17,11 @@
           method='post'>
         @method('delete')
 
-        <input class='button' type='submit' name='crear' value='Eliminar nodo' />
+        <input class='button' type='submit' name='eliminar_nodo' value='Eliminar nodo' />
     </form>
 
     <br>
 
-        <a href='{{ route('nodos.index') }}'>Volver al listado</a>
+        <a href='{{ route('nodos.index') }}'>Volver al listado de nodos</a>
 
 </x-zz.base>
