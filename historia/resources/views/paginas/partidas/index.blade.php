@@ -46,6 +46,6 @@
 
     <button><a href='{{ route('partidas.create') }}'>Crear</a></button><br><br>
 
-    <a href='{{ route('partidas.index') }}'>Listado de Nodos</a>
+    <a href='{{ route('nodos.index') }}'>Listado de Nodos</a>
 
 </x-zz.base>
