@@ -4,16 +4,16 @@
     <x-slot:titulo>Mostrar los detalles de los Nodos</x-slot:titulo>
 
     <p>ID: {{$nodo->id}}</p>
-    <p>ID_Partida: {{$nodo->id_partida}}</p>
+    <p>ID_Partida: {{$nodo->partidas_id}}</p>
     <p>Descripcion: {{$nodo->descripcion_nodo}}</p>
 
     <br/>
 
-    <a href='{{ route('nodo.edit', $nodo) }}'>Editar</a>
+    <a href='{{ route('nodos.edit', $nodo) }}'>Editar</a>
 
     <br/><br/>
 
-    <form id='{{ $nodo->id }}' action='{{ route('nodo.destroy', $nodo) }}'
+    <form id='{{ $nodo->id }}' action='{{ route('nodos.destroy', $nodo) }}'
           method='post'>
         @method('delete')
 
@@ -22,6 +22,6 @@
 
     <br>
 
-        <a href='{{ route('nodo.index') }}'>Volver al listado</a>
+        <a href='{{ route('nodos.index') }}'>Volver al listado</a>
 
 </x-zz.base>

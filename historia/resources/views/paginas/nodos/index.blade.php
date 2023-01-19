@@ -15,16 +15,16 @@
     @foreach ($nodo as $nodoCampos)
         <tr>
             <td>
-                <a href='{{ route('nodo.show', $nodoCampos) }}'>{{ $nodoCampos->id }}</a>
+                <a href='{{ route('nodos.show', $nodoCampos) }}'>{{ $nodoCampos->id }}</a>
             </td>
             <td>
-                <a href='{{ route('nodo.show', $nodoCampos) }}'>{{ $nodoCampos->id_partida }}</a>
+                <a href='{{ route('nodos.show', $nodoCampos) }}'>{{ $nodoCampos->partidas_id }}</a>
             </td>
             <td>
-                <a href='{{ route('nodo.show', $nodoCampos) }}'>{{ $nodoCampos->descripcion_nodo }}</a>
+                <a href='{{ route('nodos.show', $nodoCampos) }}'>{{ $nodoCampos->descripcion_nodo }}</a>
             </td>
             <td>
-                <form action='{{ route('nodo.destroy', $nodoCampos) }}' method='post'>
+                <form action='{{ route('nodos.destroy', $nodoCampos) }}' method='post'>
                     @method('delete')
                     @csrf
 
@@ -36,8 +36,7 @@
 
     </table><br><br>
 
-    <button><a href='{{ route('nodo.create') }}'>Crear</a></button><br><br>
+    <button><a href='{{ route('nodos.create') }}'>Crear</a></button><br><br>
 
-    <a href='{{ route('nodo.index') }}'>Listado de Nodos</a>
 
 </x-zz.base>

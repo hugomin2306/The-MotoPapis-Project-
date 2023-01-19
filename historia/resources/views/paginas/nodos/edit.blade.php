@@ -1,12 +1,12 @@
 <x-zz.base>
     <x-slot:titulo>Editar nodo</x-slot:titulo>
 
-    <form action='{{ route('nodo.update', $nodo) }}' method='post'>
+    <form action='{{ route('nodos.update', $nodo) }}' method='post'>
         @method('put')
         @csrf
 
-        <label for='id_partida'>ID Partida</label>
-        <input id='id_partida' name='id_partida' type='text' value='{{ $nodo->id_partida }}'>
+        <label for='partidas_id'>ID Partida</label>
+        <input id='partidas_id' name='partidas_id' type='text' value='{{ $nodo->partidas_id }}'>
         <br />
 
         <label for='descripcion_nodo'>Descripcion</label>
@@ -18,5 +18,5 @@
         <br />
     </form>
 
-      <a href='{{ route('nodo.index') }}'>Listado de Nodos</a>
+      <a href='{{ route('nodos.index') }}'>Listado de Nodos</a>
 </x-zz.base>
