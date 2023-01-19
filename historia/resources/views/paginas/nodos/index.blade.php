@@ -38,5 +38,7 @@
 
     <button><a href='{{ route('nodos.create') }}'>Crear</a></button><br><br>
 
+    <a href='{{ route('partidas.index') }}'>Listado de Partidas</a>
+
 
 </x-zz.base>
