@@ -15,7 +15,7 @@ return new class extends Migration
     {
         Schema::create('partidas', function (Blueprint $table) {
 
-            $table->integer('id_partida');
+            $table->id()->autoIncrement();
             $table->integer('id_jugador');
             $table->date('fecha_inicio');
             $table->date('fecha_fin');

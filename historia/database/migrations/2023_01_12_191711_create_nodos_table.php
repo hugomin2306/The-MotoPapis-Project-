@@ -18,10 +18,10 @@ return new class extends Migration
             $table->id()->autoIncrement();
             $table->integer('id_partida');
             $table->string('descripcion_nodo', 255);
-//            $table->foreignIdFor(Partidas::class)
-//                ->constrained()
-//                ->onUpdate('cascade')
-//                ->onDelete('cascade');
+            $table->foreignIdFor(Partidas::class)
+                ->constrained()
+                ->onUpdate('cascade')
+                ->onDelete('cascade');
             $table->timestamps();
         });
     }
