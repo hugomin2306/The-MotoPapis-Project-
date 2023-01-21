@@ -1,9 +1,11 @@
 <?php
 
+
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\FinalesController;
 use App\Http\Controllers\JugadoresController;
 use App\Http\Controllers\NodosController;
+use App\Http\Controllers\LinksController;
 use App\Http\Controllers\PartidasController;
 
 
@@ -11,6 +13,7 @@ use App\Http\Controllers\PartidasController;
 Route::resource('finales', FinalesController::class);
 Route::resource('jugadores', JugadoresController::class);
 Route::resource('nodos', NodosController::class);
+Route::resource('links', LinksController::class);
 Route::resource('partidas', PartidasController::class);
 
 /*

@@ -1,6 +1,6 @@
-
 <x-zz.base>
 
+    <x-slot:tituloHead>Crear nodo</x-slot:tituloHead>
     <x-slot:titulo>Crear nodo</x-slot:titulo>
 
     <form action='{{ route('nodos.store') }}' method='post'>

@@ -6,9 +6,9 @@
     <table>
 
     <tr>
-        <th>Nodos</th>
+        <th>Nodo</th>
         <th>Partida</th>
-        <th>Descripcion</th>
+        <th>Descripción</th>
         <th>Eliminar</th>
     </tr>
 
@@ -28,7 +28,7 @@
                     @method('delete')
                     @csrf
 
-                    <button type='submit'>(X)</button>
+                    <button class="botonEliminar" type='submit'>(X)</button>
                 </form>
             </td>
         </tr>
@@ -36,9 +36,7 @@
 
     </table><br><br>
 
-    <button><a href='{{ route('nodos.create') }}'>Crear</a></button><br><br>
-
-    <a href='{{ route('partidas.index') }}'>Listado de Partidas</a>
-
+    <button class="boton"><a href='{{ route('nodos.create') }}'>Crear nodo</a></button><br><br>
+    <button class="boton"><a href='{{ route('links.index') }}'>Gestionar listado de links</a></button>
 
 </x-zz.base>

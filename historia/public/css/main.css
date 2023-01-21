@@ -1,0 +1,117 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: lightgrey;
+}
+
+/* --- TABLAS, EN GENERAL --- */
+
+table, tr, th, td {
+    border: 1px solid black;
+    background-color: white;
+    padding: 5px;
+    text-align: center;
+    background-color: lightblue;
+}
+
+td a {
+    text-decoration: none;
+}
+
+td a:hover {
+    text-decoration: underline;
+}
+
+
+
+/* --- clases boton y botonEliminar, se encuentran en la view de varias páginas --- */
+
+.boton {
+    padding: 10px;
+    background-color: #7abaff;
+    border: 1px solid black;
+}
+
+.boton a {
+    padding: 15px;
+    color: black;
+    text-decoration: none;
+}
+
+.boton:hover {
+    background-color: #0c5460;
+}
+
+.boton a:hover {
+    color: white;
+}
+
+.botonEliminar {
+    padding: 5px;
+    background-color: lightcoral;
+    border: 1px solid black;
+    text-decoration: none;
+}
+
+.botonEliminar:hover {
+    background-color: red;
+    cursor: pointer;
+}
+
+/* --- class contenido, en resources/components/zz/base.blade.php --- */
+
+.contenido {
+    width: fit-content;
+    margin: 10px auto;
+}
+
+
+/* --- resources/components/zz/menu.blade.php --- */
+
+
+#menu {
+    width: 100%;
+    background-color: #2a2a2a;
+    padding: 20px 0;
+}
+
+#contenidoMenu {
+    width: fit-content;
+    margin: 0 auto;
+}
+
+.elementoMenu {
+    padding: 10px;
+    margin: 30px;
+    background-color: #0c5460;
+    color: white;
+    text-decoration: none;
+    border: 1px solid green;
+}
+
+.elementoMenu:hover {
+    background-color: lightblue;
+    color: black;
+    border: 1px solid blue;
+}
+
+
+/* --- footer, en resources/components/zz/base.blade.php --- */
+
+footer {
+    width: 100%;
+    background-color: #2a2a2a;
+    padding: 20px 0;
+    margin-top: 24%;
+}
+
+footer p {
+    color: white;
+    text-align: center;
+}
+
+
+
