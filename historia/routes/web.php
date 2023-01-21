@@ -27,3 +27,7 @@ Route::resource('partidas', PartidasController::class);
 Route::get('/', function () {
     return view('/zzz/welcome');
 });
+
+Route::get('/juego', function() {
+    return view('/paginas/inicio_juego');
+});
