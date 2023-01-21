@@ -11,6 +11,7 @@ use App\Http\Controllers\PartidasController;
 Route::resource('finales', FinalesController::class);
 Route::resource('jugadores', JugadoresController::class);
 Route::resource('nodos', NodosController::class);
+Route::resource('links', LinksController::class);
 Route::resource('partidas', PartidasController::class);
 
 /*
