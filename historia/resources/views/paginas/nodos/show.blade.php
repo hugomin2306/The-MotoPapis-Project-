@@ -17,7 +17,7 @@
           method='post'>
         @method('delete')
 
-        <input class='button' type='submit' name='crear' value='Eliminar nodo' />
+        <input class='botonEliminar' type='submit' name='crear' value='Eliminar nodo' />
     </form>
 
     <br>
