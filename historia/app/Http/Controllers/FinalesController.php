@@ -7,79 +7,74 @@ use Illuminate\Http\Request;
 
 class FinalesController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+
     public function index()
     {
-        //
+        $finales = Finales::orderBy('id_final')->get();
+        return view('paginas/finales/index', compact('finales'));
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+
     public function create()
     {
-        //
+        return view('paginas/finales/create');
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
+
     public function store(Request $request)
     {
-        //
+        $this->validate($request, [
+            'id_final' => 'required',
+            'nombre_final' => 'required',
+            'descripcion_final' => 'required',
+
+        ]);
+
+        $finales = new Finales();
+        $finales->id_final = $request->id_final;
+        $finales->nombre_final = $request->nombre_final;
+        $finales->descripcion_final = $request->descripcion_final;
+
+        $finales->save();
+
+        return redirect()->route('finales.index');
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\Models\Finales  $finales
-     * @return \Illuminate\Http\Response
-     */
+
     public function show(Finales $finales)
     {
-        //
+        return view('paginas/finales/show', compact('finales'));
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Models\Finales  $finales
-     * @return \Illuminate\Http\Response
-     */
+
     public function edit(Finales $finales)
     {
-        //
+        return view('paginas/finales/edit', compact('finales'));
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Finales  $finales
-     * @return \Illuminate\Http\Response
-     */
+
     public function update(Request $request, Finales $finales)
     {
-        //
+        $this->validate($request, [
+            'id_final' => 'required',
+            'nombre_final' => 'required',
+            'descripcion_final' => 'required',
+
+        ]);
+
+        $finales->id_final = $request->id_final;
+        $finales->nombre_final = $request->nombre_final;
+        $finales->descripcion_final = $request->descripcion_final;
+
+        $finales->save();
+
+        return redirect()->route('finales.index');
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\Models\Finales  $finales
-     * @return \Illuminate\Http\Response
-     */
+
     public function destroy(Finales $finales)
     {
-        //
+        $finales->delete();
+        return redirect()->route('finales.index');
     }
 }
