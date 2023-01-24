@@ -1,4 +1,4 @@
-<x-zz.base>
+<x-zz.base_inicio>
 
     <x-slot:tituloHead>Historia Interactiva</x-slot:tituloHead>
     <x-slot:titulo>Registrarse</x-slot:titulo>
@@ -22,4 +22,4 @@
         <br />
     </form>
 
-</x-zz.base>
+</x-zz.base_inicio>
