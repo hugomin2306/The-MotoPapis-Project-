@@ -7,79 +7,75 @@ use Illuminate\Http\Request;
 
 class JugadoresController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+
     public function index()
     {
-        //
+        $jugadores = Jugadores::orderBy('id_partida')->get();
+        return view('paginas/jugadores/index', compact('jugadores'));
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+
     public function create()
     {
-        //
+        return view('paginas/jugadores/create');
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
+
     public function store(Request $request)
     {
-        //
+        $this->validate($request, [
+            'id_partida' => 'required',
+            'nombre_jugador' => 'required',
+            'fecha_registro' => 'required',
+
+        ]);
+
+        $jugadores = new Jugadores();
+        $jugadores->id_partida = $request->id_partida;
+        $jugadores->nombre_jugador = $request->nombre_jugador;
+        $jugadores->fecha_registro = $request->fecha_registro;
+
+        $jugadores->save();
+
+        return redirect()->route('jugadores.index');
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\Models\Jugadores  $jugadores
-     * @return \Illuminate\Http\Response
-     */
+
     public function show(Jugadores $jugadores)
     {
-        //
+        return view('paginas/jugadores/show', compact('jugadores'));
+
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Models\Jugadores  $jugadores
-     * @return \Illuminate\Http\Response
-     */
+
     public function edit(Jugadores $jugadores)
     {
-        //
+        return view('paginas/jugadores/edit', compact('jugadores'));
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Jugadores  $jugadores
-     * @return \Illuminate\Http\Response
-     */
+
     public function update(Request $request, Jugadores $jugadores)
     {
-        //
+        $this->validate($request, [
+            'id_partida' => 'required',
+            'nombre_jugador' => 'required',
+            'fecha_registro' => 'required',
+
+        ]);
+
+        $jugadores->id_partida = $request->id_partida;
+        $jugadores->nombre_jugador = $request->nombre_jugador;
+        $jugadores->fecha_registro = $request->fecha_registro;
+
+        $jugadores->save();
+
+        return redirect()->route('jugadores.index');
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\Models\Jugadores  $jugadores
-     * @return \Illuminate\Http\Response
-     */
+
     public function destroy(Jugadores $jugadores)
     {
-        //
+        $jugadores->delete();
+        return redirect()->route('jugadores.index');
     }
 }
