@@ -24,20 +24,18 @@ class JugadoresController extends Controller
     public function store(Request $request)
     {
         $this->validate($request, [
-            'id_partida' => 'required',
             'nombre_jugador' => 'required',
-            'fecha_registro' => 'required',
+            'clave_jugador' => 'required',
 
         ]);
 
         $jugadores = new Jugadores();
-        $jugadores->id_partida = $request->id_partida;
+        $jugadores->clave_jugador = $request->clave_jugador;
         $jugadores->nombre_jugador = $request->nombre_jugador;
-        $jugadores->fecha_registro = $request->fecha_registro;
 
         $jugadores->save();
 
-        return redirect()->route('jugadores.index');
+        return redirect()->route('juegos.index');
     }
 
 

@@ -14,10 +14,10 @@ return new class extends Migration
     public function up()
     {
         Schema::create('jugadores', function (Blueprint $table) {
-
-            $table->integer('id_partida');
+            $table->id()->autoIncrement();
             $table->string('nombre_jugador');
-            $table->string('fecha_registro');
+            $table->string('clave_jugador');
+            $table->timestamps();
 
         });
     }

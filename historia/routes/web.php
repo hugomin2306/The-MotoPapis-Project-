@@ -31,6 +31,6 @@ Route::get('/', function () {
     return view('/zzz/welcome');
 });
 
-Route::get('/juego', function() {
-    return view('/paginas/inicio_juego');
+Route::get('/inicio', function() {
+    return view('/paginas/jugadores/create');
 });
