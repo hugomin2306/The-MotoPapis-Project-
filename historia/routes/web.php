@@ -34,3 +34,7 @@ Route::get('/', function () {
 Route::get('/inicio', function() {
     return view('/paginas/jugadores/create');
 });
+
+Route::get('/juego', function() {
+    return view('/paginas/juegos/juego');
+});

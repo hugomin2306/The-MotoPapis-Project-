@@ -1,7 +1,7 @@
 <x-zz.base>
 
     <x-slot:tituloHead>Mostrar Links</x-slot:tituloHead>
-    <x-slot:titulo>Mostrar los detalles de los Links</x-slot:titulo>
+    <x-slot:titulo>Mostrar detalle del Link</x-slot:titulo>
 
     <p>ID: {{$link->id}}</p>
     <p>ID_Nodo_Origen: {{$link->id_nodo_origen_link}}</p>
