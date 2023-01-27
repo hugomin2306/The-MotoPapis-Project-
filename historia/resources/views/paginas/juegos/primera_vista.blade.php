@@ -1,7 +1,7 @@
 <x-zz.base>
 
     <x-slot:tituloHead>Bienvenid@s!!!!</x-slot:tituloHead>
-    <x-slot:titulo>Historia Interactiva</x-slot:titulo>
+    <x-slot:titulo>Historia Interactivas</x-slot:titulo>
     <style>
         h1{
             text-align: center;

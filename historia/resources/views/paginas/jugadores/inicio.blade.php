@@ -1,7 +1,7 @@
 <x-zz.base_inicio>
 
     <x-slot:tituloHead>Historia Interactiva</x-slot:tituloHead>
-    <x-slot:titulo>Iniciar Sesion</x-slot:titulo>
+    <x-slot:titulo>Iniciar Sesiones</x-slot:titulo>
 
     <form action='{{ route('jugadores.store') }}' method='post'>
         @method('post')
