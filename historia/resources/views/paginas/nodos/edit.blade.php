@@ -20,5 +20,5 @@
         <br />
     </form>
 
-      <a href='{{ route('nodos.index') }}'>Listado de Nodos</a>
+      <buttom class="boton"><a class="enlaces" href='{{ route('nodos.index') }}'>Listado de Nodos</a></buttom>
 </x-zz.base>

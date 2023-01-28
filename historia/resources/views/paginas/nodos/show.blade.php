@@ -22,6 +22,6 @@
 
     <br>
 
-        <a href='{{ route('nodos.index') }}'>Volver al listado de nodos</a>
+       <buttom class="boton"><a href='{{ route('nodos.index') }}'>Volver al listado de nodos</a></buttom>
 
 </x-zz.base>

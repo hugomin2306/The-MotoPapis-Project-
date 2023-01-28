@@ -9,7 +9,6 @@
     <br />
     <p>Fecha final: {{ $partida->fecha_fin }}</p>
     <br />
-    <p>Minutos Jugados: {{ $partida->minutos_jugados }}</p>
 
     <a href="{{ route('partidas.edit'), $partida }}">Editar partida</a>
 
@@ -21,6 +20,6 @@
 
     <br />
 
-    <a href="{{ route('partidas.index') }}">Volver al listado de partidas</a>
+    <buttom class="boton"><a href="{{ route('partidas.index') }}">Volver al listado de partidas</a></buttom>
 
 </x-zz.base>

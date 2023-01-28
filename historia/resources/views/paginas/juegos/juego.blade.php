@@ -15,10 +15,10 @@
 
     <table>
         <tr>
-            <th><a href='{{ route('juegos.inicio_juego') }}'>Jugar partida</a></th>
+            <th><a class="enlaces" href='{{ route('juegos.inicio_juego') }}'>Jugar partida</a></th>
         </tr>
         <tr>
-            <th><a href='{{ route('partidas.create') }}'>Crear historia</a></th>
+            <th><a class="enlaces" href='{{ route('partidas.create') }}'>Crear historia</a></th>
         </tr>
     </table>
 

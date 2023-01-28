@@ -10,7 +10,6 @@
         <th>ID_Jugador</th>
         <th>Fecha de inicio</th>
         <th>Fecha de fin</th>
-        <th>Minutos jugados</th>
         <th>Eliminar</th>
     </tr>
 
@@ -28,9 +27,7 @@
             <td>
                 <a href='{{ route('partidas.show', $partidas) }}'>{{ $partidas->fecha_fin }}</a>
             </td>
-            <td>
-                <a href='{{ route('partidas.show', $partidas) }}'>{{ $partidas->minutos_jugados }}</a>
-            </td>
+
             <td>
                 <form action='{{ route('partidas.destroy', $partidas) }}' method='post'>
                     @method('delete')
@@ -44,8 +41,9 @@
 
     </table><br><br>
 
-    <button><a href='{{ route('partidas.create') }}'>Crear</a></button><br><br>
-
-    <a href='{{ route('nodos.index') }}'>Listado de Nodos</a>
+    <button class="boton"><a href='{{ route('partidas.create') }}'>Crear partida</a></button>
+    <br>
+    <br>
+    <button  class="boton"><a href='{{ route('nodos.index') }}'>Listado de Nodos</a></button>
 
 </x-zz.base>
