@@ -50,7 +50,7 @@ class PartidasController extends Controller
         $partidas->minutos_jugador = $request->minutos_jugador;
         $partidas->save();
 
-        return redirect()->route('partidas.index');
+        return redirect()->route('nodos.create');
     }
 
     /**
