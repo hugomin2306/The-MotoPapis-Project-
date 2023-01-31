@@ -48,7 +48,7 @@ class PartidasController extends Controller
         $partidas->fecha_fin = $request->fecha_fin;
         $partidas->save();
 
-        return redirect()->route('partidas.index');
+        return redirect()->route('nodos.create');
     }
 
     /**
