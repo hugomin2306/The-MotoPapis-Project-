@@ -1,11 +1,11 @@
 <x-zz.base>
 
-    <x-slot:tituloHead>Mostrar Nodos</x-slot:tituloHead>
-    <x-slot:titulo>Mostrar los detalles de los Nodos</x-slot:titulo>
+    <x-slot:tituloHead>Páginas</x-slot:tituloHead>
+    <x-slot:titulo>Mostrar páginas</x-slot:titulo>
 
-    <p>ID: {{$nodo->id}}</p>
-    <p>ID_Partida: {{$nodo->partidas_id}}</p>
-    <p>Descripcion: {{$nodo->descripcion_nodo}}</p>
+    <p>Nº Página: {{$nodo->id}}</p>
+    <br>
+    <p>Contenido: {{$nodo->descripcion_nodo}}</p>
 
     <br/>
 
@@ -17,11 +17,13 @@
           method='post'>
         @method('delete')
 
-        <input class='botonEliminar' type='submit' name='crear' value='Eliminar nodo' />
+        <input class='botonEliminar' type='submit' name='crear' value='Eliminar página' />
     </form>
 
     <br>
 
-       <buttom class="boton"><a href='{{ route('nodos.index') }}'>Volver al listado de nodos</a></buttom>
+       <button class="boton"><a href='{{ route('nodos.index') }}'>Ver páginas</a></button>
+
+        <button class='boton'><a href='{{ route('links.create') }}'>Crear decisión desde</a></button>
 
 </x-zz.base>

@@ -52,7 +52,6 @@ class NodosController extends Controller
 
         $nodo->partidas_id = $request->partidas_id;
         $nodo->descripcion_nodo = $request->descripcion_nodo;
-
         $nodo->save();
 
         return redirect()->route('nodos.index');

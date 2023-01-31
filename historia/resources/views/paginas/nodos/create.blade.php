@@ -7,6 +7,9 @@
         @method('post')
         @csrf
 
+        <br><label for='partidas_id'>Partida</label>
+        <input type='text' id='partidas_id' name='partidas_id'>
+
         <br><label for='descripcion_nodo'>Descripcion del Nodo</label>
         <input type='text' id='descripcion_nodo' name='descripcion_nodo' />
 

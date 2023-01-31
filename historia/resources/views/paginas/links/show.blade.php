@@ -3,10 +3,9 @@
     <x-slot:tituloHead>Mostrar Links</x-slot:tituloHead>
     <x-slot:titulo>Mostrar detalle del Link</x-slot:titulo>
 
-    <p>ID: {{$link->id}}</p>
-    <p>ID_Nodo_Origen: {{$link->id_nodo_origen_link}}</p>
-    <p>ID_Nodo_Destino: {{$link->id_nodo_destino_link}}</p>
-    <p>Descripción: {{$link->descripcion_link}}</p>
+    <p>Pagina Origen: {{$link->id_nodo_origen_link}}</p>
+    <p>Pagina Destino: {{$link->id_nodo_destino_link}}</p>
+    <p>Informacion: {{$link->descripcion_link}}</p>
 
     <br />
 

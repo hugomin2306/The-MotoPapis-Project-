@@ -6,12 +6,12 @@
         @method('put')
         @csrf
 
-        <label for='id_nodo_origen'>ID Nodo Origen: </label>
-        <input id='id_nodo_origen' name='id_nodo_origen' type='number' value='{{ $link->id_nodo_origen_link }}'>
+        <label for='id_nodo_origen_link'>ID Nodo Origen: </label>
+        <input id='id_nodo_origen_link' name='id_nodo_origen_link' type='number' value='{{ $link->id_nodo_origen_link }}'>
         <br />
 
-        <label for='id_nodo_destino'>ID Nodo Destino: </label>
-        <input id='id_nodo_destino' name='id_nodo_destino' type='number' value='{{ $link->id_nodo_destino_link }}'>
+        <label for='id_nodo_destino_link'>ID Nodo Destino: </label>
+        <input id='id_nodo_destino_link' name='id_nodo_destino_link' type='number' value='{{ $link->id_nodo_destino_link }}'>
         <br />
         <br />
 
