@@ -35,7 +35,7 @@ class JugadoresController extends Controller
 
         $jugadores->save();
 
-        return redirect()->route('juegos.index');
+        return redirect()->route('juego');
     }
 
 

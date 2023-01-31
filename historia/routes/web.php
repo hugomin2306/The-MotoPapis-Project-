@@ -18,7 +18,10 @@ Route::resource('partidas', PartidasController::class);
 
 Route::get('/juego', function() {
     return view('/paginas/juegos/juego');
-});
+})->name('juego');
+
+
+
 
 Route::get('/', function () {
     return view('welcome');
