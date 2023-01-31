@@ -15,16 +15,14 @@
         <br><label for='fecha_fin'>Fecha de final</label>
         <input type='text' id='fecha_fin' name='fecha_fin' />
 
-        <br><label for='minutos_jugados'>Minutos jugados</label>
-        <input type='text' id='minutos_jugados' name='minutos_jugados' />
-
         <br>
         <br>
-        <input class='button' type='submit' name='crear' value='Crear Partida' />
+        <input class='boton' type='submit' name='crear' value='Crear Partida' />
 
     </form>
 
     <br>
-<a href='{{ route('partidas.index') }}'> Ir al listado</a>
+    <br>
+    <buttom class="boton"><a href='{{ route('partidas.index') }}'> Ir al listado</a></buttom>
 
 </x-zz.base>

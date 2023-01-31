@@ -15,10 +15,10 @@
 
     <table>
         <tr>
-            <th><a href='{{ route('jugadores.create') }}'>Iniciar Sesion</a></th>
+            <th><a class="enlaces" href='{{ route('jugadores.create') }}'>Iniciar Sesion</a></th>
         </tr>
         <tr>
-            <th><a href='{{ route('jugadores.create') }}'>Registrarse</a></th>
+            <th><a class="enlaces" href='{{ route('jugadores.create') }}'>Registrarse</a></th>
         </tr>
     </table>
 

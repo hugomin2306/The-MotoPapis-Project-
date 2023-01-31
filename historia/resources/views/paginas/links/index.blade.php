@@ -38,7 +38,9 @@
             </tr>
         @endforeach
 
-    </table><br><br>
+    </table>
+
+    <br><br>
 
     <button class="boton"><a href='{{ route('links.create') }}'>Crear link</a></button><br><br>
     <button class="boton"><a href='{{ route('nodos.index') }}'>Gestionar listado de nodos</a></button>
