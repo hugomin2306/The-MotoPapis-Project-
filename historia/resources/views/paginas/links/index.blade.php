@@ -1,14 +1,14 @@
 <x-zz.base>
 
-    <x-slot:tituloHead>Links</x-slot:tituloHead>
-    <x-slot:titulo>Listado de links</x-slot:titulo>
+    <x-slot:tituloHead>Decisiones</x-slot:tituloHead>
+    <x-slot:titulo>Listado de decisiones</x-slot:titulo>
 
     <table>
         <tr>
             <th>Decision</th>
-            <th>Nodo origen</th>
-            <th>Nodo destino</th>
-            <th>Descripción</th>
+            <th>Página origen</th>
+            <th>Página destino</th>
+            <th>Información</th>
             <th>Eliminar</th>
         </tr>
 
