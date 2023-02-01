@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Links;
+use App\Models\Nodos;
 use Illuminate\Http\Request;
 
 class LinksController extends Controller
@@ -13,9 +14,11 @@ class LinksController extends Controller
         return view('paginas/links/index', compact('link'));
     }
 
-    public function create()
+    public function create(Request $request)
     {
-        return view('paginas/links/create');
+        $id = $request->input('id');
+        $nodo = Nodos::find($id);
+        return view('paginas/links/create', compact('nodo'));
     }
 
     public function store(Request $request)
@@ -27,7 +30,9 @@ class LinksController extends Controller
         ]);
 
         $link = new Links();
+        $nodo = new Nodos();
         $link->id_nodo_origen_link = $request->id_nodo_origen_link;
+        $nodo->id = $request->id;
         $link->id_nodo_destino_link = $request->id_nodo_destino_link;
         $link->descripcion_link = $request->descripcion_link;
         $link->save();

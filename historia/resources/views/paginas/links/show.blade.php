@@ -1,11 +1,11 @@
 <x-zz.base>
 
-    <x-slot:tituloHead>Mostrar Links</x-slot:tituloHead>
-    <x-slot:titulo>Mostrar detalle del Link</x-slot:titulo>
+    <x-slot:tituloHead>Mostrar Decisión</x-slot:tituloHead>
+    <x-slot:titulo>Mostrar Decisión</x-slot:titulo>
 
     <p>Pagina Origen: {{$link->id_nodo_origen_link}}</p>
     <p>Pagina Destino: {{$link->id_nodo_destino_link}}</p>
-    <p>Informacion: {{$link->descripcion_link}}</p>
+    <p>Información: {{$link->descripcion_link}}</p>
 
     <br />
 
@@ -17,7 +17,7 @@
           method='post'>
         @method('delete')
 
-        <input class='botonEliminar' type='submit' name='eliminar' value='Eliminar link' />
+        <input class='botonEliminar' type='submit' name='eliminar' value='Eliminar decisión' />
     </form>
 
     <br />

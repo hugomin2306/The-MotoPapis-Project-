@@ -5,7 +5,7 @@
 
     <table>
         <tr>
-            <th>Link</th>
+            <th>Decision</th>
             <th>Nodo origen</th>
             <th>Nodo destino</th>
             <th>Descripción</th>
@@ -42,7 +42,7 @@
 
     <br><br>
 
-    <button class="boton"><a href='{{ route('links.create') }}'>Crear link</a></button><br><br>
-    <button class="boton"><a href='{{ route('nodos.index') }}'>Gestionar listado de nodos</a></button>
+    <button class="boton"><a href='{{ route('links.create') }}'>Crear decision</a></button><br><br>
+    <button class="boton"><a href='{{ route('nodos.index') }}'>Listado de decisiones</a></button>
 
 </x-zz.base>

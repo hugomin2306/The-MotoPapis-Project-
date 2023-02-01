@@ -15,10 +15,11 @@
         <input id='descripcion_nodo' name='descripcion_nodo' type='text' value='{{ $nodo->descripcion_nodo }}'>
         <br />
         <br />
-        <input class='button' type='submit' name='crear' value='Editar Nodo'>
+        <input class='button' type='submit' name='crear' value='Editar página'>
         <br />
         <br />
     </form>
 
-      <buttom class="boton"><a class="enlaces" href='{{ route('nodos.index') }}'>Listado de Nodos</a></buttom>
+        <button class="boton"><a class="enlaces" href='{{ route('nodos.index') }}'>Listado de páginas</a></button>
+
 </x-zz.base>
