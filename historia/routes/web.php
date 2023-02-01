@@ -16,11 +16,10 @@ Route::resource('nodos', NodosController::class);
 Route::resource('links', LinksController::class);
 Route::resource('partidas', PartidasController::class);
 
+
 Route::get('/juego', function() {
     return view('/paginas/juegos/juego');
 })->name('juego');
-
-
 
 
 Route::get('/', function () {

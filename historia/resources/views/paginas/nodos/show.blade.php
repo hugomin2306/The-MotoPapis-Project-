@@ -24,6 +24,6 @@
 
        <button class="boton"><a href='{{ route('nodos.index') }}'>Ver páginas</a></button>
 
-       <button class="boton"><a class="enlaces" href='{{ route('links.create', ['id_nodo_origen_link' => $nodo->id]) }}'>Crear link desde</a></button>
+       <button class="boton"><a class="enlaces" href='{{ route('links.create', ['id_nodo_origen_link' => $nodo->id]) }}'>Crear decision desde</a></button>
 
 </x-zz.base>

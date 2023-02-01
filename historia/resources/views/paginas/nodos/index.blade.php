@@ -6,8 +6,8 @@
     <table>
 
     <tr>
-        <th>Página</th>
         <th>Partida</th>
+        <th>Página</th>
         <th>Descripción</th>
         <th>Eliminar</th>
     </tr>
@@ -15,10 +15,10 @@
     @foreach ($nodo as $nodoCampos)
         <tr>
             <td>
-                <a href='{{ route('nodos.show', $nodoCampos) }}'>{{ $nodoCampos->id }}</a>
+                <a href='{{ route('nodos.show', $nodoCampos) }}'>{{ $nodoCampos->partidas_id }}</a>
             </td>
             <td>
-                <a href='{{ route('nodos.show', $nodoCampos) }}'>{{ $nodoCampos->partidas_id }}</a>
+                <a href='{{ route('nodos.show', $nodoCampos) }}'>{{ $nodoCampos->id }}</a>
             </td>
             <td>
                 <a href='{{ route('nodos.show', $nodoCampos) }}'>{{ $nodoCampos->descripcion_nodo }}</a>

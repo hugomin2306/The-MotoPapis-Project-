@@ -10,9 +10,6 @@
         <label for='id_nodo_origen_link'>Página origen: </label>
         <input type="number"  name="id_nodo_origen_link" value="{{ request('id_nodo_origen_link') }}">
 
-
-
-
         <br />
 
         <label for='id_nodo_destino_link'>Página Destino: </label>
@@ -25,7 +22,7 @@
         <br />
 
 
-        <input class='boton' type='submit' name='crear' value='Crear Link'>
+        <input class='boton' type='submit' name='crear' value='Crear decision'>
         <br />
         <br />
     </form>
