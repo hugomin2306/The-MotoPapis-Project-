@@ -41,7 +41,7 @@ class JugadoresController extends Controller
 
     public function show(Jugadores $jugadores)
     {
-        return view('paginas/jugadores/show', compact('jugadores'));
+        return view('paginas/jugadores/login', compact('jugadores'));
 
     }
 
@@ -75,5 +75,29 @@ class JugadoresController extends Controller
     {
         $jugadores->delete();
         return redirect()->route('jugadores.index');
+    }
+        public function authenticate(Request $request)
+    {
+        $this->validate($request, [
+            'nombre_jugador' => 'required',
+            'clave_jugador' => 'required'
+            ]);
+        $jugadores = Jugadores::orderBy('nombre_jugador')->get();
+
+
+        foreach ($jugadores as $jugador) {
+            if(strcmp($jugador->nombre_jugador, $request->nombre_jugador) == 0
+            and strcmp($jugador->clave_jugador, $request->clave_jugador) == 0){
+                return redirect()->route('juego');
+            } else {
+                return view('/jugadores/login');
+            }
+        }
+
+    }
+
+    public function login()
+    {
+        return view('pagina/jugadores/login');
     }
 }

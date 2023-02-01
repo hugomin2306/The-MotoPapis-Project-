@@ -21,6 +21,12 @@ Route::get('/juego', function() {
 })->name('juego');
 
 
+Route::patch('jugadores/login',
+    [\App\Http\Controllers\JugadoresController::class, 'login'])->name('jugadores.login');
+
+
+Route::patch('jugadores/authenticate',
+    [\App\Http\Controllers\JugadoresController::class])->name('jugadores.authenticate');
 
 
 Route::get('/', function () {
