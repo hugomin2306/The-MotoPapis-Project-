@@ -16,8 +16,9 @@
         <input type='number' id='id_nodo_destino_link' name='id_nodo_destino_link'>
         <br />
 
-        <label for='descripcion_link'>Informacion: </label>
-        <input type='text' id='descripcion_link' name='descripcion_link'>
+        <label for='descripcion_link'>Informacion: </label><br>
+        <textarea id="descripcion_link" name="descripcion_link" rows="4" cols="50"></textarea>
+
         <br />
         <br />
 

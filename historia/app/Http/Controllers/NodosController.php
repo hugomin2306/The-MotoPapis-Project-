@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Links;
 use App\Models\Nodos;
 use Illuminate\Http\Request;
 
@@ -59,6 +60,7 @@ class NodosController extends Controller
 
     public function destroy(Nodos $nodo)
     {
+        $nodo->links()->delete();
         $nodo->delete();
         return redirect()->route('nodos.index');
     }

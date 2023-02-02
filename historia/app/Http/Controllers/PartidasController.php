@@ -54,12 +54,12 @@ class PartidasController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Partidas  $partidas
+     * @param  \App\Models\Partidas  $partida
      * @return \Illuminate\Http\Response
      */
-    public function show(Partidas $partidas)
+    public function show(Partidas $partida)
     {
-        return view('paginas/partidas/show', compact('partidas'));
+        return view('paginas/partidas/show', compact('partida'));
     }
 
     /**
@@ -68,9 +68,9 @@ class PartidasController extends Controller
      * @param  \App\Models\Partidas  $partidas
      * @return \Illuminate\Http\Response
      */
-    public function edit(Partidas $partidas)
+    public function edit(Partidas $partida)
     {
-        return view('paginas/partidas/edit', compact('partidas'));
+        return view('paginas/partidas/edit', compact('partida'));
     }
 
     /**
@@ -80,7 +80,7 @@ class PartidasController extends Controller
      * @param  \App\Models\Partidas  $partidas
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Partidas $partidas)
+    public function update(Request $request, Partidas $partida)
     {
          $this->validate($request, [
             'id_jugador' => 'required',
@@ -89,10 +89,10 @@ class PartidasController extends Controller
         ]);
 
 
-        $partidas->id_jugador = $request->id_jugador;
-        $partidas->fecha_inicio = $request->fecha_inicio;
-        $partidas->fecha_fin = $request->fecha_fin;
-        $partidas->save();
+        $partida->id_jugador = $request->id_jugador;
+        $partida->fecha_inicio = $request->fecha_inicio;
+        $partida->fecha_fin = $request->fecha_fin;
+        $partida->save();
 
         return redirect()->route('partidas.index');
     }
@@ -103,9 +103,9 @@ class PartidasController extends Controller
      * @param  \App\Models\Partidas  $partidas
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Partidas $partidas)
+    public function destroy(Partidas $partida)
     {
-        $partidas->delete();
+        $partida->delete();
         return redirect()->route('partidas.index');
     }
 }

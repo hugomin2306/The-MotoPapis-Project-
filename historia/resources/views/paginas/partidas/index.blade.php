@@ -44,6 +44,6 @@
     <button class="boton"><a href='{{ route('partidas.create') }}'>Crear partida</a></button>
     <br>
     <br>
-    <button  class="boton"><a href='{{ route('nodos.index') }}'>Listado de Nodos</a></button>
+    <button  class="boton"><a href='{{ route('nodos.index') }}'>Listado de páginas</a></button>
 
 </x-zz.base>

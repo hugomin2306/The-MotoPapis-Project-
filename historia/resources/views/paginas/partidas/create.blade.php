@@ -10,10 +10,10 @@
         <input type='number' id='id_jugador' name='id_jugador' />
 
         <br><label for='fecha_inicio'>Fecha de inicio</label>
-        <input type='text' id='fecha_incio' name='fecha_inicio' />
+        <input type='date' id='fecha_incio' name='fecha_inicio' />
 
         <br><label for='fecha_fin'>Fecha de final</label>
-        <input type='text' id='fecha_fin' name='fecha_fin' />
+        <input type='date' id='fecha_fin' name='fecha_fin' />
 
         <br>
         <br>

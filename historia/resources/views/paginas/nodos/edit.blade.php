@@ -11,11 +11,12 @@
         <input id='partidas_id' name='partidas_id' type='text' value='{{ $nodo->partidas_id }}'>
         <br />
 
-        <label for='descripcion_nodo'>Descripcion</label>
-        <input id='descripcion_nodo' name='descripcion_nodo' type='text' value='{{ $nodo->descripcion_nodo }}'>
+        <label for='descripcion_nodo'>Descripcion</label><br>
+        <textarea id="descripcion_nodo" name="descripcion_nodo" rows="4" cols="50">{{ $nodo->descripcion_nodo }}</textarea>
+
         <br />
         <br />
-        <input class='button' type='submit' name='crear' value='Editar página'>
+        <input class='boton' type='submit' name='editar' value='Editar página'>
         <br />
         <br />
     </form>

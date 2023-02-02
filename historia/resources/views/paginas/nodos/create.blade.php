@@ -10,8 +10,8 @@
         <br><label for='partidas_id'>Partida</label>
         <input type='text' id='partidas_id' name='partidas_id'>
 
-        <br><label for='descripcion_nodo'>Descripcion de la página</label>
-        <input type='text' id='descripcion_nodo' name='descripcion_nodo' />
+        <br><label for='descripcion_nodo'>Descripcion de la página</label><br>
+        <textarea id="descripcion_nodo" name="descripcion_nodo" rows="4" cols="50"></textarea>
 
         <br>
         <br>

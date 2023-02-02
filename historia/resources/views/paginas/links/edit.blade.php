@@ -15,8 +15,8 @@
         <br />
         <br />
 
-        <label for='descripcion_link'>Descripción decisión: </label>
-        <input id='descripcion_link' name='descripcion_link' type='text' value='{{ $link->descripcion_link }}'>
+        <label for='descripcion_link'>Descripción decisión: </label><br>
+        <textarea id="descripcion_link" name="descripcion_link" rows="4" cols="50">{{ $link->descripcion_link }}</textarea>
         <br />
         <br />
 
