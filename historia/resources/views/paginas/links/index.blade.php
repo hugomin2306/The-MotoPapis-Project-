@@ -43,6 +43,6 @@
     <br><br>
 
     <button class="boton"><a href='{{ route('links.create') }}'>Crear decision</a></button><br><br>
-    <button class="boton"><a href='{{ route('nodos.index') }}'>Listado de decisiones</a></button>
+    <button class="boton"><a href='{{ route('nodos.index') }}'>Ver páginas</a></button>
 
 </x-zz.base>

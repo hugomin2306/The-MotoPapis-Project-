@@ -37,6 +37,6 @@
     </table><br><br>
 
     <button class="boton"><a href='{{ route('nodos.create') }}'>Crear página</a></button><br><br>
-    <button class="boton"><a href='{{ route('links.index') }}'>Gestionar listado de páginas</a></button>
+    <button class="boton"><a href='{{ route('links.index') }}'>Ver decisiones</a></button>
 
 </x-zz.base>
