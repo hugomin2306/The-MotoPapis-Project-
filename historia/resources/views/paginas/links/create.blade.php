@@ -29,6 +29,6 @@
     </form>
 
     <br>
-    <button class="boton"><a href='{{ route('links.index') }}'> Ir al listado de decisiones</a></button>
+    <button class="boton"><a href='{{ route('links.index') }}'> Ir al listado de decisione</a></button>
 
 </x-zz.base>
