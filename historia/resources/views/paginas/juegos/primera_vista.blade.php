@@ -1,4 +1,4 @@
-<x-zz.base>
+<x-zz.base_inicio>
 
     <x-slot:tituloHead>Bienvenid@s!!!!</x-slot:tituloHead>
     <x-slot:titulo>Historia Interactiva</x-slot:titulo>
@@ -22,4 +22,4 @@
         </tr>
     </table>
 
-</x-zz.base>
+</x-zz.base_inicio>
