@@ -15,7 +15,7 @@
 
     <table>
         <tr>
-            <th><a href='{{ route('jugadores.create') }}'>Iniciar Sesion</a></th>
+            <th><a href='{{ route('jugadores.login') }}'>Iniciar Sesion</a></th>
         </tr>
         <tr>
             <th><a href='{{ route('jugadores.create') }}'>Registrarse</a></th>

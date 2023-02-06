@@ -16,10 +16,17 @@ Route::resource('nodos', NodosController::class);
 Route::resource('links', LinksController::class);
 Route::resource('partidas', PartidasController::class);
 
-
 Route::get('/juego', function() {
     return view('/paginas/juegos/juego');
 })->name('juego');
+
+
+Route::patch('jugadores/login',
+    [\App\Http\Controllers\JugadoresController::class, 'login'])->name('jugadores.login');
+
+
+Route::patch('jugadores/authenticate',
+    [\App\Http\Controllers\JugadoresController::class])->name('jugadores.authenticate');
 
 
 Route::get('/', function () {
