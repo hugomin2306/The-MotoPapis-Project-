@@ -22,4 +22,8 @@
         </tr>
     </table>
 
+    <a class="enlaces" href='{{ route('logout') }}'>Log Out</a>
+
+
+
 </x-zz.base>

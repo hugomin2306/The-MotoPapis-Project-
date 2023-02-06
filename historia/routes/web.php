@@ -33,6 +33,11 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/logout',function () {
+    return view('auth.login');
+})->name('logout');
+
+
 Route::get('/juego', function () {
     return view('/paginas/juegos/juego');
 })->middleware(['auth', 'verified'])->name('juego');
