@@ -33,7 +33,7 @@
                     @method('delete')
                     @csrf
 
-                    <button type='submit'>(X)</button>
+                    <button class="botonEliminar" type='submit'>(X)</button>
                 </form>
             </td>
         </tr>
