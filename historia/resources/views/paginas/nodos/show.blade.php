@@ -9,7 +9,7 @@
 
     <br/>
 
-    <a href='{{ route('nodos.edit', $nodo) }}'>Editar</a>
+    <a class="enlaces" href='{{ route('nodos.edit', $nodo) }}'>Editar</a>
 
     <br/><br/>
 
@@ -24,6 +24,6 @@
 
        <button class="boton"><a href='{{ route('nodos.index') }}'>Ver páginas</a></button>
 
-       <button class="boton"><a class="enlaces" href='{{ route('links.create', ['id_nodo_origen_link' => $nodo->id]) }}'>Crear decision desde</a></button>
+       <button class="boton"><a href='{{ route('links.create', ['id_nodo_origen_link' => $nodo->id]) }}'>Crear decision desde</a></button>
 
 </x-zz.base>
