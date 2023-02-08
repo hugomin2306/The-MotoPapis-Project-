@@ -1,9 +1,9 @@
-<x-zz.base_inicio>
+<x-zz.base>
 
     <x-slot:tituloHead>Historia Interactiva</x-slot:tituloHead>
-    <x-slot:titulo>Registrarse</x-slot:titulo>
+    <x-slot:titulo>Iniciar Sesion</x-slot:titulo>
 
-    <form action='{{ route('jugadores.store') }}' method='post'>
+    <form action='{{ route('users.store') }}' method='post'>
         @method('post')
         @csrf
 
@@ -17,9 +17,9 @@
         <br />
         <br />
 
-        <input class='boton' type='submit' name='crear' value='Registrarse'>
+        <input class='boton' type='submit' name='iniciar' value='Iniciar Sesion'>
         <br />
         <br />
     </form>
 
-</x-zz.base_inicio>
+</x-zz.base>
