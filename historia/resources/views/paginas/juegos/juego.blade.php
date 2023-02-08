@@ -1,4 +1,4 @@
-<x-zz.base>
+<x-zz.base_inicio>
 
     <x-slot:tituloHead>Inicio Juego</x-slot:tituloHead>
     <x-slot:titulo>Historia Interactiva</x-slot:titulo>
@@ -14,4 +14,4 @@
 
 
 
-</x-zz.base>
+</x-zz.base_inicio>

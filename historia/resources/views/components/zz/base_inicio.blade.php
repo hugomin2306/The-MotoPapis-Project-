@@ -7,6 +7,7 @@
 </head>
 <body>
 
+    <x-zz.menu />
     <div class="contenido">
         <h1>{{ $titulo }}</h1>
     </div>
