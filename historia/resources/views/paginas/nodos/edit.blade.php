@@ -21,6 +21,6 @@
         <br />
     </form>
 
-        <button class="boton"><a class="enlaces" href='{{ route('nodos.index') }}'>Listado de páginas</a></button>
+        <button class="boton"><a href='{{ route('nodos.index') }}'>Listado de páginas</a></button>
 
 </x-zz.base>

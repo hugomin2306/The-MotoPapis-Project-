@@ -1,9 +1,7 @@
 <nav id="menu">
     <div id="contenidoMenu">
-        <a class="elementoMenu" href='{{ route('juego') }}'>Partidas</a>
-        <a class="elementoMenu" href='{{ route('nodos.index')  }}'>Páginas</a>
-        <a class="elementoMenu" href='{{ route('nodos.create') }}'>Crear página</a>
-
-
+        <a class="elementoMenu" href='{{ route('juego') }}'>Inicio</a>
+        <a class="elementoMenu" href='{{ route('users.show', Auth::user())  }}'>Ver perfil</a>
+        <a class="elementoMenu" href='{{ route('logout') }}'>Cerrar sesión</a>
     </div>
 </nav>

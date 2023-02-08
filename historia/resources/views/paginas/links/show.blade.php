@@ -9,7 +9,7 @@
 
     <br />
 
-    <button class="boton"><a href='{{ route('links.edit', $link) }}'>Editar</a></button>
+    <a class="enlaces" href='{{ route('links.edit', $link) }}'>Editar</a>
 
     <br /><br />
 

@@ -6,7 +6,7 @@
     <title>{{ $tituloHead ?? 'Historia Interactiva' }}</title>
 </head>
 <body>
-    <x-zz.menu />
+    <x-zz.menu_juego />
 
     <div class="contenido">
 
