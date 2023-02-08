@@ -14,9 +14,6 @@
         <label for='fecha_inicio'>Fecha de inicio</label>
         <input type='date' id='fecha_incio' name='fecha_inicio' />
 
-        <br><label for='fecha_fin'>Fecha de final</label>
-        <input type='date' id='fecha_fin' name='fecha_fin' />
-
         <br>
         <br>
         <input class='boton' type='submit' name='crear' value='Crear Partida' />

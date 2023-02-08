@@ -1,4 +1,4 @@
-<x-zz.base>
+<x-zz.base_inicio>
 
     <x-slot:tituloHead>Editar perfil</x-slot:tituloHead>
     <x-slot:titulo>Editar perfil</x-slot:titulo>

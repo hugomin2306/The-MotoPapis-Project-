@@ -23,11 +23,13 @@ class NodosController extends Controller
     {
         $this->validate($request, [
             'partidas_id' => 'required',
+            'titulo_nodo' => 'required',
             'descripcion_nodo' => 'required',
         ]);
 
         $nodo = new Nodos();
         $nodo->partidas_id = $request->partidas_id;
+        $nodo->titulo_nodo = $request->titulo_nodo;
         $nodo->descripcion_nodo = $request->descripcion_nodo;
         $nodo->save();
 
@@ -48,10 +50,12 @@ class NodosController extends Controller
     {
         $this->validate($request, [
             'partidas_id' => 'required',
+            'titulo_nodo' => 'required',
             'descripcion_nodo' => 'required',
         ]);
 
         $nodo->partidas_id = $request->partidas_id;
+        $nodo->titulo_nodo = $request->titulo_nodo;
         $nodo->descripcion_nodo = $request->descripcion_nodo;
         $nodo->save();
 

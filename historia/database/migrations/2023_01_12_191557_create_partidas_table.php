@@ -18,7 +18,6 @@ return new class extends Migration
             $table->id()->autoIncrement();
             $table->integer('id_jugador');
             $table->date('fecha_inicio');
-            $table->date('fecha_fin');
             $table->timestamps();
 
         });

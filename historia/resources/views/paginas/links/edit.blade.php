@@ -1,6 +1,6 @@
 <x-zz.base>
-    <x-slot:tituloHead>Editar decisión</x-slot:tituloHead>
-    <x-slot:titulo>Editar decision</x-slot:titulo>
+    <x-slot:tituloHead>Editar link</x-slot:tituloHead>
+    <x-slot:titulo>Editar link</x-slot:titulo>
 
     <form action='{{ route('links.update', $link) }}' method='post'>
         @method('put')
@@ -15,15 +15,15 @@
         <br />
         <br />
 
-        <label for='descripcion_link'>Descripción decisión: </label><br>
+        <label for='descripcion_link'>Descripción link: </label><br>
         <textarea id="descripcion_link" name="descripcion_link" rows="4" cols="50">{{ $link->descripcion_link }}</textarea>
         <br />
         <br />
 
-        <input class='boton' type='submit' name='editar' value='Editar decisión'>
+        <input class='boton' type='submit' name='editar' value='Editar link'>
         <br />
         <br />
     </form>
 
-    <button class="boton"><a href='{{ route('links.index') }}'>Listado de decisiones</a></button>
+    <button class="boton"><a href='{{ route('links.index') }}'>Listado de links</a></button>
 </x-zz.base>

@@ -16,6 +16,7 @@ return new class extends Migration
         Schema::create('nodos', function (Blueprint $table) {
 
             $table->id()->autoIncrement();
+            $table->string('titulo_nodo', 255);
             $table->string('descripcion_nodo', 255);
             $table->foreignIdFor(Partidas::class)
                 ->constrained()

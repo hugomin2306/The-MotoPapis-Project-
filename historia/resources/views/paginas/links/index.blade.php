@@ -1,13 +1,13 @@
 <x-zz.base>
 
-    <x-slot:tituloHead>Decisiones</x-slot:tituloHead>
-    <x-slot:titulo>Listado de decisiones</x-slot:titulo>
+    <x-slot:tituloHead>Links</x-slot:tituloHead>
+    <x-slot:titulo>Listado de links</x-slot:titulo>
 
     <table>
         <tr>
-            <th>Decision</th>
-            <th>Página origen</th>
-            <th>Página destino</th>
+            <th>Link</th>
+            <th>Nodo origen</th>
+            <th>Nodo destino</th>
             <th>Información</th>
             <th>Eliminar</th>
         </tr>
@@ -42,7 +42,7 @@
 
     <br><br>
 
-    <button class="boton"><a href='{{ route('links.create') }}'>Crear decision</a></button><br><br>
-    <button class="boton"><a href='{{ route('nodos.index') }}'>Ver páginas</a></button>
+    <button class="boton"><a href='{{ route('links.create') }}'>Crear link</a></button><br><br>
+    <button class="boton"><a href='{{ route('nodos.index') }}'>Ver nodos</a></button>
 
 </x-zz.base>

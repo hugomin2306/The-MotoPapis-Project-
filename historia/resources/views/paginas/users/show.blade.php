@@ -1,4 +1,4 @@
-<x-zz.base>
+<x-zz.base_inicio>
 
     <x-slot:tituloHead>Perfil Jugador</x-slot:tituloHead>
     <x-slot:titulo>Perfil</x-slot:titulo>
@@ -9,9 +9,9 @@
     <br />
 
     <button class="boton"><a href="{{ route('partidas.index') }}">Volver al listado de partidas</a></button>
-    <br />
+    <br /><br />
 
     <button class="boton"><a href="{{ route('users.edit', $user) }}">Editar usuario</a></button>
 
-</x-zz.base>
+</x-zz.base_inicio>
 

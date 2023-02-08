@@ -1,4 +1,4 @@
-<x-zz.base>
+<x-zz.base_inicio>
 
     <x-slot:tituloHead>Partidas</x-slot:tituloHead>
     <x-slot:titulo>Listado de partidas</x-slot:titulo>
@@ -9,23 +9,19 @@
         <th>Partida</th>
         <th>ID_Jugador</th>
         <th>Fecha de inicio</th>
-        <th>Fecha de fin</th>
         <th>Eliminar</th>
     </tr>
 
     @foreach ($partida as $partidas)
         <tr>
             <td>
-                <a href='{{ route('partidas.show', $partidas) }}'>{{ $partidas->id }}</a>
+                <a href='{{ route('nodos.index', $partidas) }}'>{{ $partidas->id }}</a>
             </td>
             <td>
-                <a href='{{ route('partidas.show', $partidas) }}'>{{ $partidas->id_jugador }}</a>
+                <a href='{{ route('nodos.index', $partidas) }}'>{{ $partidas->id_jugador }}</a>
             </td>
             <td>
-                <a href='{{ route('partidas.show', $partidas) }}'>{{ $partidas->fecha_inicio }}</a>
-            </td>
-            <td>
-                <a href='{{ route('partidas.show', $partidas) }}'>{{ $partidas->fecha_fin }}</a>
+                <a href='{{ route('nodos.index', $partidas) }}'>{{ $partidas->fecha_inicio }}</a>
             </td>
 
             <td>
@@ -41,9 +37,14 @@
 
     </table><br><br>
 
-    <button class="boton"><a href='{{ route('partidas.create') }}'>Crear partida</a></button>
+    <form action='{{ route('partidas.store') }}' method='post'>
+        @method('post')
+        @csrf
+
+        <button type='submit'>Crear Partida</button>
+    </form>
     <br>
     <br>
     <button  class="boton"><a href='{{ route('nodos.index') }}'>Listado de páginas</a></button>
 
-</x-zz.base>
+</x-zz.base_inicio>

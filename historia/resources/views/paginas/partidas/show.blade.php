@@ -18,6 +18,6 @@
 
     <br />
 
-    <buttom class="boton"><a href="{{ route('partidas.index') }}">Volver al listado de partidas</a></buttom>
+    <button class="boton"><a href="{{ route('partidas.index') }}">Volver al listado de partidas</a></button>
 
 </x-zz.base>

@@ -15,13 +15,13 @@
     @foreach ($nodo as $nodoCampos)
         <tr>
             <td>
-                <a href='{{ route('nodos.show', $nodoCampos) }}'>{{ $nodoCampos->partidas_id }}</a>
+                <a href='{{ route('nodos.edit', $nodoCampos) }}'>{{ $nodoCampos->partidas_id }}</a>
             </td>
             <td>
-                <a href='{{ route('nodos.show', $nodoCampos) }}'>{{ $nodoCampos->id }}</a>
+                <a href='{{ route('nodos.edit', $nodoCampos) }}'>{{ $nodoCampos->id }}</a>
             </td>
             <td>
-                <a href='{{ route('nodos.show', $nodoCampos) }}'>{{ $nodoCampos->descripcion_nodo }}</a>
+                <a href='{{ route('nodos.edit', $nodoCampos) }}'>{{ $nodoCampos->descripcion_nodo }}</a>
             </td>
             <td>
                 <form action='{{ route('nodos.destroy', $nodoCampos) }}' method='post'>

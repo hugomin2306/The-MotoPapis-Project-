@@ -4,6 +4,9 @@ namespace App\Http\Controllers;
 
 use App\Models\Partidas;
 use Illuminate\Http\Request;
+use Carbon\Carbon;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 
 class PartidasController extends Controller
 {
@@ -14,8 +17,10 @@ class PartidasController extends Controller
      */
     public function index()
     {
+        $sql = 'SELECT * FROM users';
+        $usuarios = DB::select($sql);
         $partida = Partidas::orderBy('id')->get();
-        return view('paginas/partidas/index', compact('partida'));
+        return view('paginas/partidas/index', compact('partida', 'usuarios'));
     }
 
     /**
@@ -25,7 +30,7 @@ class PartidasController extends Controller
      */
     public function create()
     {
-        return view('paginas/partidas/create');
+        return redirect()->route('partidas.store');
     }
 
     /**
@@ -34,21 +39,16 @@ class PartidasController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store()
     {
-            $this->validate($request, [
-            'id_jugador' => 'required',
-            'fecha_inicio' => 'required',
-            'fecha_fin' => 'required',
-        ]);
-
+        $date = Carbon::now();
+        $id = Auth::id();
         $partidas = new Partidas();
-        $partidas->id_jugador = $request->id_jugador;
-        $partidas->fecha_inicio = $request->fecha_inicio;
-        $partidas->fecha_fin = $request->fecha_fin;
+        $partidas->id_jugador = $id;
+        $partidas->fecha_inicio = $date;
         $partidas->save();
 
-        return redirect()->route('nodos.create');
+        return redirect()->route('nodos.index');
     }
 
     /**
@@ -57,9 +57,9 @@ class PartidasController extends Controller
      * @param  \App\Models\Partidas  $partida
      * @return \Illuminate\Http\Response
      */
-    public function show(Partidas $partida)
+    public function show(Partidas $partidas)
     {
-        return view('paginas/partidas/show', compact('partida'));
+        return view('paginas/partidas/show', compact('partidas'));
     }
 
     /**
@@ -85,13 +85,11 @@ class PartidasController extends Controller
          $this->validate($request, [
             'id_jugador' => 'required',
             'fecha_inicio' => 'required',
-            'fecha_fin' => 'required',
         ]);
 
 
         $partida->id_jugador = $request->id_jugador;
         $partida->fecha_inicio = $request->fecha_inicio;
-        $partida->fecha_fin = $request->fecha_fin;
         $partida->save();
 
         return redirect()->route('partidas.index');
@@ -103,9 +101,9 @@ class PartidasController extends Controller
      * @param  \App\Models\Partidas  $partidas
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Partidas $partida)
+    public function destroy(Partidas $partidas)
     {
-        $partida->delete();
-        return redirect()->route('partidas.index');
+        $partidas->delete();
+        return redirect()->route('partidas.create');
     }
 }
