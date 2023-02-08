@@ -32,9 +32,15 @@ th{
 
 td{
     padding: 8px;
+    text-decoration: none;
     background-color: #e8edff;
     border-bottom: 1px solid #ffff;
     color: #039;
+}
+
+td a{
+    text-decoration: none;
+    color: black;
 }
 
 tr:hover td {
@@ -48,11 +54,14 @@ tr:hover td {
 
 td a:hover {
     text-decoration: underline;
+
 }
 
 /* --- clases boton y botonEliminar, se encuentran en la view de varias páginas --- */
 
+
 .boton {
+    font-weight: bold;
     padding: 10px 15px;
     font-size: 14px;
     cursor: pointer;

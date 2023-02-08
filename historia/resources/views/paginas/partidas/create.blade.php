@@ -6,10 +6,12 @@
         @method('post')
         @csrf
 
-        <br><label for='id_jugador'>ID del Jugador</label>
+        <br>
+        <label for='id_jugador'>ID del Jugador</label>
         <input type='number' id='id_jugador' name='id_jugador' />
 
-        <br><label for='fecha_inicio'>Fecha de inicio</label>
+        <br>
+        <label for='fecha_inicio'>Fecha de inicio</label>
         <input type='date' id='fecha_incio' name='fecha_inicio' />
 
         <br><label for='fecha_fin'>Fecha de final</label>

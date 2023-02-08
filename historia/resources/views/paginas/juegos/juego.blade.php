@@ -2,27 +2,15 @@
 
     <x-slot:tituloHead>Inicio Juego</x-slot:tituloHead>
     <x-slot:titulo>Historia Interactiva</x-slot:titulo>
-    <style>
-        h1{
-            text-align: center;
-        }
-        table{
-            display: flex;
-            justify-content: center;
-            text-align: center;
-        }
-    </style>
 
-    <table>
-        <tr>
-            <th><a class="enlaces" href='{{ route('partidas.store') }}'>Jugar partida</a></th>
-        </tr>
-        <tr>
-            <th><a class="enlaces" href='{{ route('partidas.create') }}'>Crear historia</a></th>
-        </tr>
-    </table>
+    <div>
+        <button class="boton"><a  href='{{ route('partidas.store') }}'>Jugar partida</a></button>
+        <button class="boton"><a  href='{{ route('partidas.create') }}'>Crear historia</a></button>
+    </div>
 
-    <a class="enlaces" href='{{ route('logout') }}'>Log Out</a>
+    <br> <br>
+
+    <button class="boton"><a  href='{{ route('logout') }}'>Log Out</a></button>
 
 
 
