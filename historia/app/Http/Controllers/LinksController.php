@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use App\Models\Links;
 use App\Models\Nodos;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
+use League\CommonMark\Extension\CommonMark\Node\Inline\Link;
 
 class LinksController extends Controller
 {
@@ -50,8 +52,11 @@ class LinksController extends Controller
         return view('paginas/links/edit', compact('link'));
     }
 
-    public function update(Request $request, Links $link)
+    public function update(Request $request, $id)
     {
+        $link = Links::where('id', $id)
+            ->first();
+
         $this->validate($request, [
             'id_nodo_origen_link' => 'required',
             'id_nodo_destino_link' => 'required',
@@ -72,5 +77,22 @@ class LinksController extends Controller
         $link->delete();
         return redirect()->route('links.index');
     }
+
+    /* public function getLinkById(Request $request, $id) {
+
+        $link = DB::table('links')
+            ->select('*')
+            ->where('id', $id)
+            ->first();
+
+        $params = array(
+            $request,
+            $link
+        );
+
+        $cadena = implode(',', $params);
+        return redirect()->route('links.update', compact('cadena'));
+    }
+*/
 }
 

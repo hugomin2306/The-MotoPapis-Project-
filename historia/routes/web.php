@@ -29,6 +29,8 @@ Route::get('/juego', function () {
     return view('/paginas/juegos/juego');
 })->middleware(['auth', 'verified'])->name('juego');
 
+Route::get('/links/getLink', [LinksController::class, 'getLinkById'])->middleware(['auth', 'verified'])->name('links.getById');
+
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');

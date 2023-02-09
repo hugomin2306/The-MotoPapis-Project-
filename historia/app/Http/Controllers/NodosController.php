@@ -44,13 +44,6 @@ class NodosController extends Controller
 
     public function edit(Nodos $nodo)
     {
-/*
-        $linksDestino = DB::table('links')
-            ->select('links.*')
-            ->join('nodos', 'nodos.id', '=', 'links.id_nodo_destino_link')
-            ->where('nodos.id', 'links.id_nodo_destino_link')
-            ->get();
-*/
         $linksDestino = DB::table('links')
             ->select('*')
             ->where('id_nodo_destino_link', $nodo->id)
