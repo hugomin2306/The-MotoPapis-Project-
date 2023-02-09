@@ -3,6 +3,7 @@
     <x-slot:titulo>Editar link</x-slot:titulo>
 
     <form action='{{ route('links.update', $link) }}' method='post'>
+        {{ print_r($link) }}
         @method('put')
         @csrf
 

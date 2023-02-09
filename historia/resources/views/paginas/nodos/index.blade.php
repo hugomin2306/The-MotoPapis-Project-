@@ -18,7 +18,7 @@
                 <a href='{{ route('nodos.edit', $nodoCampos) }}'>{{ $nodoCampos->partidas_id }}</a>
             </td>
             <td>
-                <a href='{{ route('nodos.edit', $nodoCampos) }}'>{{ $nodoCampos->id }}</a>
+                <a href='{{ route('nodos.edit', $nodoCampos) }}'>{{ $nodoCampos->titulo_nodo }}</a>
             </td>
             <td>
                 <a href='{{ route('nodos.edit', $nodoCampos) }}'>{{ $nodoCampos->descripcion_nodo }}</a>

@@ -177,5 +177,21 @@ footer p {
     text-align: center;
 }
 
+/* --- zonaLinksNodos --- */
+#zonaLinksNodos {
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+#zonaLinksNodos div {
+    margin: 20px 60px;
+}
+
+#cajaLink {
+    border: 1px solid black;
+    background-color: lightblue;
+    padding: 10px;
+}
+
 
 

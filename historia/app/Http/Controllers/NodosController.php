@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Links;
 use App\Models\Nodos;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class NodosController extends Controller
 {
@@ -43,7 +44,24 @@ class NodosController extends Controller
 
     public function edit(Nodos $nodo)
     {
-        return view('paginas/nodos/edit', compact('nodo'));
+/*
+        $linksDestino = DB::table('links')
+            ->select('links.*')
+            ->join('nodos', 'nodos.id', '=', 'links.id_nodo_destino_link')
+            ->where('nodos.id', 'links.id_nodo_destino_link')
+            ->get();
+*/
+        $linksDestino = DB::table('links')
+            ->select('*')
+            ->where('id_nodo_destino_link', $nodo->id)
+            ->get();
+
+        $linksOrigen = DB::table('links')
+            ->select('*')
+            ->where('id_nodo_origen_link', $nodo->id)
+            ->get();
+
+        return view('paginas/nodos/edit', compact('nodo'))->with('linksDestino', $linksDestino)->with('linksOrigen', $linksOrigen);
     }
 
     public function update(Request $request, Nodos $nodo)
