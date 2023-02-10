@@ -10,7 +10,7 @@
 
     <br> <br>
 
-    <button class="boton"><a  href='{{ route('logout') }}'>Log Out</a></button>
+
 
 
 

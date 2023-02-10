@@ -10,26 +10,24 @@ use App\Http\Controllers\Auth\AuthenticatedSessionController;
 
 
 
-
 Route::resource('finales', FinalesController::class);
+Route::resource('users', ProfileController::class);
 Route::resource('nodos', NodosController::class);
 Route::resource('links', LinksController::class);
 Route::resource('partidas', PartidasController::class);
-Route::resource('users', ProfileController::class);
+
 
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('/paginas/juegos/primera_vista');
 });
 
-Route::get('/logout',[AuthenticatedSessionController::class, 'destroy'])->name('logout');
+Route::get('/logout', [AuthenticatedSessionController::class, 'destroy'])->name('logout');
 
 
 Route::get('/juego', function () {
     return view('/paginas/juegos/juego');
 })->middleware(['auth', 'verified'])->name('juego');
-
-Route::get('/links/getLink', [LinksController::class, 'getLinkById'])->middleware(['auth', 'verified'])->name('links.getById');
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
