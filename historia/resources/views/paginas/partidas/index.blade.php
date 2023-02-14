@@ -24,6 +24,9 @@
             <td>
                 <a href='{{ route('nodos.index', $partidas) }}'>{{ $partidas->fecha_inicio }}</a>
             </td>
+            <td>
+                <a href='{{ route('nodos.show', $partidas) }}'>(X)</a>
+            </td>
 
             <td>
                 <a href='{{ route('nodos.show', $partidas) }}'>Jugar</a>

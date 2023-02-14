@@ -10,9 +10,13 @@ use Illuminate\Support\Facades\DB;
 
 class NodosController extends Controller
 {
-    public function index()
+    public function index(Partidas $partidas)
     {
-        $nodo = Nodos::orderBy('id')->get();
+        $nodo = DB::table('nodos')
+            ->select('*')
+            ->where('partidas_id', $partidas->id)
+            ->get();
+
         return view('paginas/nodos/index', compact('nodo'));
     }
 
@@ -42,7 +46,7 @@ class NodosController extends Controller
     {
         $nodos = DB::table('nodos')
             ->select('*')
-            ->where('partidas_id', $partidas->id)
+            ->where('partidas_id', 1)
             ->get();
 
         $linkOrigen = DB::table('links')

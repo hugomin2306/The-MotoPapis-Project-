@@ -22,6 +22,10 @@ Route::get('/', function () {
     return view('/paginas/juegos/primera_vista');
 });
 
+Route::get('/comienzo', function () {
+    return view('/paginas/juegos/comienzo');
+})->name('comienzo');
+
 Route::get('/logout', [AuthenticatedSessionController::class, 'destroy'])->name('logout');
 
 

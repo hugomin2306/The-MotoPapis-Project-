@@ -6,17 +6,12 @@
     <table>
 
     <tr>
-        <th>Partida</th>
-        <th>Página</th>
-        <th>Descripción</th>
+        <th>Nodo</th>
         <th>Eliminar</th>
     </tr>
 
-    @foreach ($nodo as $nodoCampos)
+        @foreach ($nodo as $nodoCampos)
         <tr>
-            <td>
-                <a href='{{ route('nodos.edit', $nodoCampos) }}'>{{ $nodoCampos->partidas_id }}</a>
-            </td>
             <td>
                 <a href='{{ route('nodos.edit', $nodoCampos) }}'>{{ $nodoCampos->titulo_nodo }}</a>
             </td>
