@@ -7,12 +7,8 @@
         @method('put')
         @csrf
 
-        <label for='partidas_id'>ID Partida</label>
-        <input id='partidas_id' name='partidas_id' type='text' value='{{ $nodo->partidas_id }}'>
-        <br />
-
         <label for='titulo_nodo'>Titulo del Nodo: </label>
-        <input id='titulo_nodo' name='titulo_nodo' type='text' value='{{ $nodo->partidas_id }}'>
+        <input id='titulo_nodo' name='titulo_nodo' type='text' value='{{ $nodo->titulo_nodo }}'>
         <br />
 
         <label for='descripcion_nodo'>Descripcion</label><br>

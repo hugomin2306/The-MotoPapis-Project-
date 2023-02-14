@@ -25,4 +25,4 @@
 
     <button class="boton"><a class="enlaces" href='{{ route('partidas.index') }}'>Listado de partidas</a></button>
 
-</x-zz.base>
+</x-zz.base_inicio>
