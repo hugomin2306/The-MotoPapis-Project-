@@ -54,7 +54,15 @@ class NodosController extends Controller
             ->where('id_nodo_origen_link', $nodo->id)
             ->get();
 
-        return view('paginas/nodos/edit', compact('nodo'))->with('linksDestino', $linksDestino)->with('linksOrigen', $linksOrigen);
+
+        $nodosPartida = DB::table('nodos')
+            ->select('*')
+            ->where('partidas_id', $nodo->partidas_id)
+            ->get();
+
+        return view('paginas/nodos/edit', compact('nodo'))
+            ->with('linksDestino', $linksDestino)->with('linksOrigen', $linksOrigen)
+            ->with('nodosPartida', $nodosPartida);
     }
 
     public function update(Request $request, Nodos $nodo)

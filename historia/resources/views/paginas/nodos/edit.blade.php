@@ -38,12 +38,44 @@
                         @method('put')
                         @csrf
 
-                        <label for='id_nodo_origen_link'>ID Nodo Origen: </label>
-                        <input id='id_nodo_origen_link' name='id_nodo_origen_link' type='number' value='{{ $link->id_nodo_origen_link }}'>
+                            <label for='id_nodo_origen_link'>ID Nodo Origen: </label>
+                            <select name="id_nodo_origen_link">
+                                @foreach($nodosPartida as $nodoPartida)
+
+                                    @if($nodoPartida->id === $link->id_nodo_origen_link)
+
+                                        <option value="{{ $nodoPartida->id }}" selected>{{ $nodoPartida->titulo_nodo }}</option>
+
+                                    @else
+
+                                        <option value="{{ $nodoPartida->id }}">{{ $nodoPartida->titulo_nodo }}</option>
+
+                                    @endif
+
+                                @endforeach
+
+                            </select>
+
                         <br />
 
                         <label for='id_nodo_destino_link'>ID Nodo Destino: </label>
-                        <input id='id_nodo_destino_link' name='id_nodo_destino_link' type='number' value='{{ $link->id_nodo_destino_link }}'>
+                        <select name="id_nodo_destino_link">
+                            @foreach($nodosPartida as $nodoPartida)
+
+                                @if($nodoPartida->id === $nodo->id and $nodoPartida->id === $link->id_nodo_destino_link and $nodo->id === $link->id_nodo_destino_link)
+
+                                    <option value="{{ $nodoPartida->id }}" selected>{{ $nodoPartida->titulo_nodo }}</option>
+
+                                @else
+
+                                    <option value="{{ $nodoPartida->id }}">{{ $nodoPartida->titulo_nodo }}</option>
+
+                                @endif
+
+                            @endforeach
+
+                        </select>
+
                         <br />
                         <br />
 
@@ -72,14 +104,45 @@
                         @csrf
 
                         <label for='id_nodo_origen_link'>ID Nodo Origen: </label>
-                        <input id='id_nodo_origen_link' name='id_nodo_origen_link' type='number' value='{{ $link->id_nodo_origen_link }}'>
+                        <select name="id_nodo_origen_link">
+                            @foreach($nodosPartida as $nodoPartida)
+
+                                @if($nodoPartida === $nodo->id and $nodoPartida->id === $link->id_nodo_origen_link and $nodo->id === $link->id_nodo_origen_link)
+
+                                    <option value="{{ $nodoPartida->id }}" selected>{{ $nodoPartida->titulo_nodo }}</option>
+
+                                @else
+
+                                    <option value="{{ $nodoPartida->id }}">{{ $nodoPartida->titulo_nodo }}</option>
+
+                                @endif
+
+                            @endforeach
+
+                        </select>
+
                         <br />
 
                         <label for='id_nodo_destino_link'>ID Nodo Destino: </label>
-                        <input id='id_nodo_destino_link' name='id_nodo_destino_link' type='number' value='{{ $link->id_nodo_destino_link }}'>
-                        <br />
-                        <br />
+                        <select name="id_nodo_destino_link">
+                            @foreach($nodosPartida as $nodoPartida)
 
+                                @if($nodoPartida->id === $link->id_nodo_destino_link)
+
+                                    <option value="{{ $nodoPartida->id }}" selected>{{ $nodoPartida->titulo_nodo }}</option>
+
+                                @else
+
+                                    <option value="{{ $nodoPartida->id }}">{{ $nodoPartida->titulo_nodo }}</option>
+
+                                @endif
+
+                            @endforeach
+
+                        </select>
+
+                        <br />
+                        <br />
                         <label for='descripcion_link'>Descripción link: </label><br>
                         <textarea id="descripcion_link" name="descripcion_link" rows="4" cols="50">{{ $link->descripcion_link }}</textarea>
                         <br />
@@ -103,15 +166,32 @@
             @method('post')
             @csrf
 
-            <label for='id_nodo_origen_link'>Nodo origen: </label>
-            <input type="number"  name="id_nodo_origen_link" value="{{ request('id_nodo_origen_link') }}">
+            <label for='id_nodo_origen_link'>ID Nodo Origen: </label>
+            <select name="id_nodo_origen_link">
+                <option disabled selected>Elige</option>
+                @foreach($nodosPartida as $nodoPartida)
+
+                    <option value="{{ $nodoPartida->id }}">{{ $nodoPartida->titulo_nodo }}</option>
+
+                @endforeach
+
+            </select>
 
             <br />
 
-            <label for='id_nodo_destino_link'>Nodo Destino: </label>
-            <input type='number' id='id_nodo_destino_link' name='id_nodo_destino_link'>
-            <br />
+            <label for='id_nodo_destino_link'>ID Nodo Destino: </label>
+            <select name="id_nodo_destino_link">
+                <option disabled selected>Elige</option>
+                @foreach($nodosPartida as $nodoPartida)
 
+                    <option value="{{ $nodoPartida->id }}">{{ $nodoPartida->titulo_nodo }}</option>
+
+                @endforeach
+
+            </select>
+
+            <br />
+            <br />
             <label for='descripcion_link'>Informacion: </label><br>
             <textarea id="descripcion_link" name="descripcion_link" rows="4" cols="50"></textarea>
 
