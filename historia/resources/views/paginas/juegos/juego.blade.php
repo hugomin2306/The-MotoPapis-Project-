@@ -4,8 +4,16 @@
     <x-slot:titulo>Historia Interactiva</x-slot:titulo>
 
     <div>
+        @can('partidas.index')
         <button class="boton"><a  href='{{ route('partidas.store') }}'>Jugar partida</a></button>
-        <button class="boton"><a  href='{{ route('partidas.create') }}'>Crear historia</a></button>
+        @endcan
+
+
+            @can('partidas.create')
+            <button class="boton"><a  href='{{ route('partidas.create') }}'>Crear historia</a>
+            @endcan
+
+        </button>
     </div>
 
     <br> <br>
