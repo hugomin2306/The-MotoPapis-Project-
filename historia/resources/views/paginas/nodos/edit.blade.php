@@ -52,6 +52,13 @@
                         <br />
                         <br />
                     </form>
+
+                    <form action='{{ route('links.destroy', $link->id) }}' method='post'>
+                        @method('delete')
+                        @csrf
+
+                        <button class="botonEliminar" type='submit'>(X)</button>
+                    </form>
                 </div>
             @endforeach
 
@@ -84,6 +91,13 @@
                         <input class='boton' type='submit' name='editar' value='Editar link'>
                         <br />
                         <br />
+                    </form>
+
+                    <form action='{{ route('links.destroy', $link->id) }}' method='post'>
+                        @method('delete')
+                        @csrf
+
+                        <button class="botonEliminar" type='submit'>(X)</button>
                     </form>
                 </div>
             @endforeach
