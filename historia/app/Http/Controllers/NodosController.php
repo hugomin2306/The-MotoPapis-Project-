@@ -17,6 +17,9 @@ class NodosController extends Controller
             ->where('partidas_id', $partidas->id)
             ->get();
 
+
+
+
         return view('paginas/nodos/index', compact('nodo'));
     }
 
