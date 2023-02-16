@@ -11,6 +11,6 @@ class Nodos extends Model
 
     public function links()
     {
-        return $this->hasMany(Links::class, 'id_nodo_origen_link', 'id');
+        return $this->belongsToMany(Links::class, 'id_nodo_destino_link', 'id_nodo_origen_link', 'id');
     }
 }
