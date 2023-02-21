@@ -9,6 +9,7 @@
         <th>Partida</th>
         <th>Jugador</th>
         <th>Fecha de inicio</th>
+        <th>Jugar</th>
         <th>Eliminar</th>
     </tr>
 
@@ -22,6 +23,10 @@
             </td>
             <td>
                 <a href='{{ route('nodos.index', $partidas) }}'>{{ $partidas->fecha_inicio }}</a>
+            </td>
+
+            <td>
+                <a href='{{ route('nodos.show', $partidas) }}'>Jugar</a>
             </td>
 
             <td>
