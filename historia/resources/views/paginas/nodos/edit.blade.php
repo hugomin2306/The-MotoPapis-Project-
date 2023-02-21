@@ -46,6 +46,8 @@
 
                             </select>
 
+
+
                         <br />
                         <br />
 
@@ -58,7 +60,18 @@
                         <br />
                         <br />
                     </form>
+
+                    <form action='{{ route('links.destroy', $link->id) }}' method='post'>
+                        @method('delete')
+                        @csrf
+
+                        <button class="botonEliminar" type='submit'>(X)</button>
+                    </form>
+
                 </div>
+
+
+
             @endforeach
 
         <div>
@@ -105,6 +118,7 @@
             <br />
             <br />
         </form>
+
             </div>
 <h2>Editar nodo</h2>
         <form action='{{ route('nodos.update', $nodo) }}' method='post'>
@@ -188,6 +202,14 @@
                         <br />
                         <br />
                     </form>
+
+            <form action='{{ route('links.destroy', $link->id) }}' method='post'>
+            @method('delete')
+            @csrf
+
+            <button class="botonEliminar" type='submit'>(X)</button>
+        </form>
+
 
                 <br />
         </div>
