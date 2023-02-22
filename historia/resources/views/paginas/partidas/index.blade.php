@@ -7,33 +7,30 @@
 
     <tr>
         <th>Partida</th>
-        <th>Jugador</th>
+        <th>ID_Jugador</th>
         <th>Fecha de inicio</th>
         <th>Jugar</th>
         <th>Eliminar</th>
     </tr>
 
-    @foreach ($partida as $partidas)
+    @foreach ($partida as $partidaCampos)
         <tr>
             <td>
-                <a href='{{ route('nodos.index', $partidas) }}'>{{ $partidas->id }}</a>
+                <a href='{{ route('nodos.index', $partidaCampos) }}'>{{ $partidaCampos->id }}</a>
             </td>
             <td>
-                <a href='{{ route('users.show', $partidas) }}'>{{ $user->username }}</a>
+                <a href='{{ route('nodos.index', $partidaCampos) }}'>{{ $partidaCampos->id_jugador }}</a>
             </td>
             <td>
-                <a href='{{ route('partidas.show', $partidas) }}'>{{ $partidas->fecha_inicio }}</a>
-            </td>
-            <td>
-                <a href='{{ route('nodos.show', $partidas) }}'>(X)</a>
+                <a href='{{ route('partidas.show', $partidaCampos) }}'>{{ $partidaCampos->fecha_inicio }}</a>
             </td>
 
             <td>
-                <a href='{{ route('nodos.show', $partidas) }}'>Jugar</a>
+                <a href='{{ route('nodos.show', $partidaCampos) }}'>Jugar</a>
             </td>
 
             <td>
-                <form action='{{ route('partidas.destroy', $partidas) }}' method='post'>
+                <form action='{{ route('partidas.destroy', $partidaCampos) }}' method='post'>
                     @method('delete')
                     @csrf
 
