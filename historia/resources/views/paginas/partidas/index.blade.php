@@ -7,7 +7,7 @@
 
     <tr>
         <th>Partida</th>
-        <th>ID_Jugador</th>
+        <th>Nombre Jugador</th>
         <th>Fecha de inicio</th>
         <th>Jugar</th>
         <th>Eliminar</th>
@@ -19,7 +19,7 @@
                 <a href='{{ route('nodos.index', $partidaCampos) }}'>{{ $partidaCampos->id }}</a>
             </td>
             <td>
-                <a href='{{ route('nodos.index', $partidaCampos) }}'>{{ $partidaCampos->id_jugador }}</a>
+                <a href='{{ route('users.show', $partidaCampos) }}'>{{ $user->name }}</a>
             </td>
             <td>
                 <a href='{{ route('partidas.show', $partidaCampos) }}'>{{ $partidaCampos->fecha_inicio }}</a>

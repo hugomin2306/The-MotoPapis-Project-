@@ -1,12 +1,13 @@
 <x-zz.base>
 
-    <x-slot:tituloHead>Páginas</x-slot:tituloHead>
-    <x-slot:titulo>Listado de páginas</x-slot:titulo>
+    <x-slot:tituloHead>Nodos</x-slot:tituloHead>
+    <x-slot:titulo>Listado de nodos</x-slot:titulo>
 
     <table>
 
     <tr>
         <th>Nodo</th>
+        <th>Descripcion</th>
         <th>Eliminar</th>
     </tr>
 
@@ -31,7 +32,6 @@
 
     </table><br><br>
 
-    <button class="boton"><a href='{{ route('nodos.create') }}'>Crear página</a></button><br><br>
-    <button class="boton"><a href='{{ route('links.index') }}'>Ver decisiones</a></button>
+    <button class="boton"><a href='{{ route('nodos.create') }}'>Crear nodo</a></button><br><br>
 
 </x-zz.base>

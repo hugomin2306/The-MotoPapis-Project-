@@ -18,8 +18,9 @@ class PartidasController extends Controller
      */
     public function index()
     {
+        $user = Auth::user();
         $partida = Partidas::orderBy('id')->get();
-        return view('paginas/partidas/index', compact('partida'));
+        return view('paginas/partidas/index', compact('partida', 'user'));
     }
 
     /**
