@@ -12,14 +12,7 @@ class NodosController extends Controller
 {
     public function index(Partidas $partidas)
     {
-        $nodo = DB::table('nodos')
-            ->select('*')
-            ->where('partidas_id', $partidas->id)
-            ->get();
-
-
-
-
+        $nodo = Nodos::orderBy('id')->get();
         return view('paginas/nodos/index', compact('nodo'));
     }
 

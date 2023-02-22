@@ -59,7 +59,12 @@ class PartidasController extends Controller
      */
     public function show(Partidas $partidas)
     {
-        return view('paginas/partidas/show', compact('partidas'));
+        $nodo = DB::table('nodos')
+            ->select('*')
+            ->where('partidas_id', $partidas->id)
+            ->get();
+
+        return view('paginas/partidas/show', compact('nodo'));
     }
 
     /**
