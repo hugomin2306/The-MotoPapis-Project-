@@ -10,7 +10,7 @@ use Illuminate\Support\Facades\DB;
 
 class NodosController extends Controller
 {
-    public function index(Partidas $partidas)
+    public function index()
     {
         $nodo = Nodos::orderBy('id')->get();
         return view('paginas/nodos/index', compact('nodo'));

@@ -6,19 +6,13 @@
     <table>
 
         <tr>
-            <th>Partida</th>
-            <th>ID_Jugador</th>
-            <th>Fecha de inicio</th>
-            <th>Jugar</th>
+            <th>Titulo</th>
             <th>Eliminar</th>
         </tr>
     @foreach ($nodo as $nodoCampos)
         <tr>
             <td>
                 <a href='{{ route('nodos.edit', $nodoCampos) }}'>{{ $nodoCampos->titulo_nodo }}</a>
-            </td>
-            <td>
-                <a href='{{ route('nodos.edit', $nodoCampos) }}'>{{ $nodoCampos->descripcion_nodo }}</a>
             </td>
             <td>
                 <form action='{{ route('nodos.destroy', $nodoCampos) }}' method='post'>
