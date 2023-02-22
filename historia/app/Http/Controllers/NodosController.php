@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Links;
+use App\Models\Partidas;
 use App\Models\Nodos;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
@@ -37,9 +38,19 @@ class NodosController extends Controller
         return redirect()->route('nodos.index');
     }
 
-    public function show(Nodos $nodo)
+    public function show(Nodos $nodo, Partidas $partidas, Request $request)
     {
-        return view('paginas/nodos/show', compact('nodo'));
+        $nodos = DB::table('nodos')
+            ->select('*')
+            ->where('partidas_id', 1)
+            ->get();
+
+        $linkOrigen = DB::table('links')
+            ->select('*')
+            ->where('id_nodo_origen_link', $nodo->id)
+            ->get();
+
+        return view('paginas/nodos/show', compact('nodo', 'linkOrigen', 'partidas'));
     }
 
     public function edit(Nodos $nodo)

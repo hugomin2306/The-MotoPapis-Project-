@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Nodos;
 use App\Models\Partidas;
 use Illuminate\Http\Request;
 use Carbon\Carbon;
@@ -17,9 +18,8 @@ class PartidasController extends Controller
      */
     public function index()
     {
-        $user = Auth::user();
         $partida = Partidas::orderBy('id')->get();
-        return view('paginas/partidas/index', compact('partida', 'user'));
+        return view('paginas/partidas/index', compact('partida'));
     }
 
     /**
@@ -56,9 +56,11 @@ class PartidasController extends Controller
      * @param  \App\Models\Partidas  $partida
      * @return \Illuminate\Http\Response
      */
-    public function show(Partidas $partidas)
+    public function show(Partidas $partida)
     {
-        return view('paginas/partidas/show', compact('partidas'));
+        $nodo = Nodos::orderBy('id')->where('partidas_id', $partida->id)->get();
+
+        return view('paginas/partidas/show', compact('nodo'));
     }
 
     /**

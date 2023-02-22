@@ -1,7 +1,28 @@
 <x-zz.base>
 
     <x-slot:tituloHead>Editar nodo</x-slot:tituloHead>
-    <x-slot:titulo></x-slot:titulo>
+    <x-slot:titulo>Editar nodo</x-slot:titulo>
+
+    <form action='{{ route('nodos.update', $nodo) }}' method='post'>
+        @method('put')
+        @csrf
+
+        <label for='titulo_nodo'>Titulo del Nodo: </label>
+        <input id='titulo_nodo' name='titulo_nodo' type='text' value='{{ $nodo->titulo_nodo }}'>
+        <br />
+
+        <label for='descripcion_nodo'>Descripcion</label><br>
+        <textarea id="descripcion_nodo" name="descripcion_nodo" rows="4" cols="50">{{ $nodo->descripcion_nodo }}</textarea>
+
+        <br />
+        <br />
+        <input class='boton' type='submit' name='editar' value='Editar página'>
+        <br />
+        <br />
+    </form>
+
+    <br />
+    <br />
 
         <div id="zonaLinksNodos">
             <div>

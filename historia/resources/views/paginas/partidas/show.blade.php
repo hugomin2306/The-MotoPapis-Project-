@@ -3,21 +3,30 @@
     <x-slot:tituloHead>Mostrar Partida</x-slot:tituloHead>
     <x-slot:titulo>Mostrar los detalles de la Partida</x-slot:titulo>
 
-    <p>Jugador: {{ $partidas->id_jugador }}</p>
-    <br />
-    <p>Fecha de inicio: {{ $partidas->fecha_inicio }}</p>
-    <br />
-    <p>Fecha final: {{ $partidas->fecha_fin }}</p>
+    <table>
+
+        <tr>
+            <th>Titulo</th>
+            <th>Eliminar</th>
+        </tr>
+    @foreach ($nodo as $nodoCampos)
+        <tr>
+            <td>
+                <a href='{{ route('nodos.edit', $nodoCampos) }}'>{{ $nodoCampos->titulo_nodo }}</a>
+            </td>
+            <td>
+                <form action='{{ route('nodos.destroy', $nodoCampos) }}' method='post'>
+                    @method('delete')
+                    @csrf
+
+                    <button class="botonEliminar" type='submit'>(X)</button>
+                </form>
+            </td>
+        </tr>
+    @endforeach
     <br />
 
-    <form action="{{ route('partidas.destroy'), $partidas }}" method="post">
-        @method('delete')
+    </table>
 
-        <input type="submit" class="button" name="eliminar_partida" value="Eliminar partida">
-    </form>
-
-    <br />
-
-    <button class="boton"><a href="{{ route('partidas.index') }}">Volver al listado de partidas</a></button>
 
 </x-zz.base>
