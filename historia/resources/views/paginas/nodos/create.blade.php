@@ -8,7 +8,7 @@
         @csrf
 
         <br><label for='partidas_id'>Partida</label>
-        <input type='text' id='partidas_id' name='partidas_id'>
+        <input type="text" name="id_partida" value="{{ $id_partida }}">
 
         <br><label for='titulo_nodo'>Titulo</label>
         <input type='text' id='titulo_nodo' name='titulo_nodo'>

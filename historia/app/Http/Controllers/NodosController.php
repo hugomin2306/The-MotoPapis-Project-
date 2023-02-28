@@ -16,9 +16,11 @@ class NodosController extends Controller
         return view('paginas/nodos/index', compact('nodo'));
     }
 
-    public function create()
+    public function create(Request $request)
     {
-        return view('paginas/nodos/create');
+         $id_partida = $request->input('id_partida', 1); // Establecer el valor predeterminado a 1
+        return view('paginas/nodos/create', compact('id_partida'));
+       // return view('paginas/nodos/create');
     }
 
     public function store(Request $request)

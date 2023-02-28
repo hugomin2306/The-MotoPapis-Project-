@@ -28,5 +28,7 @@
 
     </table>
 
+    <button class="boton"><a href='{{ route('nodos.create') }}'>Crear página</a></button><br><br>
+
 
 </x-zz.base>

@@ -226,11 +226,14 @@
 
             <label for='id_nodo_origen_link'>Nodo Origen: </label>
             <select name="id_nodo_origen_link">
-                <option disabled selected>{{ $nodo->titulo_nodo }}</option>
+
                 @foreach($nodosPartida as $nodoPartida)
 
+                    @if ($nodo->id == $nodoPartida->id)
+                    <option value="{{ $nodoPartida->id }}" selected >{{ $nodoPartida->titulo_nodo }}</option>
+                    @else
                     <option value="{{ $nodoPartida->id }}">{{ $nodoPartida->titulo_nodo }}</option>
-
+                    @endif
                 @endforeach
 
             </select>
